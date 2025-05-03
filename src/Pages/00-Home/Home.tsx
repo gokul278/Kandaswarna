@@ -5,7 +5,7 @@ interface HomeProps {}
 
 const Home: React.FC<HomeProps> = () => {
   return (
-    <div className="w-full h-[200vh] bg-[#e0e0e0]">
+    <div className="w-full h-[100vh] bg-[#e0e0e0]">
       Home Component
       <div className="flex flex-col items-center justify-center min-h-svh">
         <Button>Click me</Button>
