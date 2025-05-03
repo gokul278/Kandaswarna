@@ -15,7 +15,7 @@ const Footer: React.FC<FooterProps> = () => {
   return (
     <>
       <div className="w-[100%] bg-[#1dcd9eb8] backdrop-blur-sm flex justify-center items-center border-b-1 border-[#fff]">
-        <div className="w-[100%] lg:w-[80%] flex flex-col lg:flex-row justify-center items-center py-5">
+        <div className="w-[90%] lg:w-[80%] flex flex-col lg:flex-row justify-center items-center py-10 lg:py-5">
           <div className="w-[100%] lg:w-[45%] flex gap-3 justify-start">
             <div className="w-[40px] group h-[40px] flex justify-around items-center border-2 rounded-4xl hover:border-[#777] transition-all duration-300 cursor-pointer">
               <Facebook className="w-[20px] h-[20px] mr-[1px] text-[#fff] group-hover:text-[#777] transition-all duration-300" />
@@ -31,7 +31,7 @@ const Footer: React.FC<FooterProps> = () => {
             </div>
           </div>
           <div className="w-[100%] lg:w-[55%]  flex flex-col lg:flex-row justify-center items-center">
-            <div className="w-[100%] lg:w-[50%] flex gap-4 mt-8 lg:mt-0 justify-end">
+            <div className="w-[100%] lg:w-[50%] flex gap-4 mt-8 lg:mt-0 justify-start lg:justify-end">
               <div className="h-[40px] flex justify-center items-center">
                 <Phone className="w-[35px] h-[35px] mt-[5px] text-[#fff]" />
               </div>
@@ -44,7 +44,7 @@ const Footer: React.FC<FooterProps> = () => {
                 </div>
               </div>
             </div>
-            <div className="w-[100%] lg:w-[50%] flex justify-end gap-4 mt-8 lg:mt-0">
+            <div className="w-[100%] lg:w-[50%] flex justify-start lg:justify-end gap-4 mt-8 lg:mt-0">
               <div className="h-[40px] flex justify-center items-center">
                 <MapPin className="w-[35px] h-[35px] mt-[5px] text-[#fff]" />
               </div>
@@ -61,8 +61,8 @@ const Footer: React.FC<FooterProps> = () => {
         </div>
       </div>
       <div className="w-[100%] bg-[#1dcd9eb8] backdrop-blur-sm flex justify-center items-center border-b-1 border-[#fff]">
-        <div className="w-[100%] lg:w-[80%] flex flex-col lg:flex-row justify-between py-15">
-          <div className="w-[30%]">
+        <div className="w-[90%] lg:w-[80%] flex flex-col lg:flex-row justify-between py-15">
+          <div className="w-[100%] lg:w-[30%]">
             <div className="text-[#fff] text-[18px] font-[Poppins] font-[700]">
               KANDASWARNA
             </div>
@@ -78,7 +78,7 @@ const Footer: React.FC<FooterProps> = () => {
               Magni perspiciatis reprehenderit eos.
             </div>
           </div>
-          <div className="w-[30%] flex flex-col">
+          <div className="w-[30%] flex flex-col mt-10 lg:mt-0">
             <div className="text-[#fff] text-[18px] font-[Poppins] font-[700]">
               MENU
             </div>
@@ -117,7 +117,7 @@ const Footer: React.FC<FooterProps> = () => {
               </div>
             </div>
           </div>
-          <div className="w-[30%] flex flex-col">
+          <div className="w-[30%] flex flex-col mt-10 lg:mt-0">
             <div className="text-[#fff] text-[18px] font-[Poppins] font-[700]">
               SERVICES
             </div>
@@ -147,8 +147,8 @@ const Footer: React.FC<FooterProps> = () => {
         </div>
       </div>
       <div className="w-[100%] bg-[#fff] backdrop-blur-sm flex justify-center items-center border-b-1 border-[#fff]">
-        <div className="w-[100%] lg:w-[80%] flex py-5 text-[#7d7a7a] font-[Poppins] font-[400] text-[12px]">
-        Copyright © 2025, Kandaswarna Groups
+        <div className="w-[90%] lg:w-[80%] flex py-5 text-[#7d7a7a] font-[Poppins] font-[400] text-[12px]">
+          Copyright © 2025, Kandaswarna Groups
         </div>
       </div>
     </>
