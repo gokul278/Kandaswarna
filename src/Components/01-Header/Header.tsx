@@ -8,7 +8,7 @@ interface HeaderProps {}
 
 const Header: React.FC<HeaderProps> = () => {
   return (
-    <div className="w-full h-[8.9vh] fixed flex justify-center items-center bg-[#1dcd9eb8] backdrop-blur-sm">
+    <div className="w-full h-[8.9vh] fixed flex justify-center z-50 items-center bg-[#1dcd9eb8] backdrop-blur-sm">
       <div className="lg:w-[80%] w-[95%] flex h-[100%] justify-between rounded-b-2xl px-5 py-1 ">
         <div className=" w-[50%] lg:w-[15%] h-[100%] flex items-center cursor-pointer">
           <img src={logoLight} className=" h-[35px]" alt="" />

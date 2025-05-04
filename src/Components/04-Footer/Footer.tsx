@@ -14,7 +14,7 @@ interface FooterProps {}
 const Footer: React.FC<FooterProps> = () => {
   return (
     <>
-      <div className="w-[100%] bg-[#1dcd9eb8] backdrop-blur-sm flex justify-center items-center border-b-1 border-[#fff]">
+      <div className="w-[100%] relative bg-[#1dcd9eb8] backdrop-blur-sm flex justify-center items-center border-b-1 border-[#fff] z-0">
         <div className="w-[90%] lg:w-[80%] flex flex-col lg:flex-row justify-center items-center py-10 lg:py-5">
           <div className="w-[100%] lg:w-[45%] flex gap-3 justify-start">
             <div className="w-[40px] group h-[40px] flex justify-around items-center border-2 rounded-4xl hover:border-[#777] transition-all duration-300 cursor-pointer">
