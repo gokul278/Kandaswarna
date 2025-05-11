@@ -147,6 +147,7 @@ const MobileNavbar: React.FC<NavbarProps> = () => {
               {item.isMultiple ? (
                 <div className="relative">
                   <div
+                  style={{ fontFamily: "Poppins" }}
                     className="flex font-[Poppins] font-[700] text-[#404040] cursor-pointer items-center gap-[4px]"
                     onClick={() =>
                       setOpenIndex(openIndex === index ? null : index)
@@ -172,6 +173,7 @@ const MobileNavbar: React.FC<NavbarProps> = () => {
                             <div key={subIndex}>
                               <a
                                 href={subItem.link}
+                                style={{ fontFamily: "Poppins" }}
                                 className="block w-[180px] px-4 py-[5px] text-[12px] font-[Poppins] font-[700] text-gray-700 hover:text-gray-900"
                                 role="menuitem"
                               >
@@ -181,6 +183,7 @@ const MobileNavbar: React.FC<NavbarProps> = () => {
                                 subItem.subNav.map((item, i) => (
                                   <div
                                     key={i}
+                                    style={{ fontFamily: "Poppins" }}
                                     className="block w-[180px] cursor-pointer items-center px-4 mb-0 h-[30px] text-sm text-[12px] font-[Poppins] font-[400] text-gray-700 hover:text-gray-900"
                                   >
                                     {item.heading}
@@ -197,19 +200,19 @@ const MobileNavbar: React.FC<NavbarProps> = () => {
                   )}
                 </div>
               ) : (
-                <div className="relative group font-[Poppins] font-[700] text-[#404040] cursor-pointer">
+                <div style={{ fontFamily: "Poppins" }} className="relative group font-[Poppins] font-[700] text-[#404040] cursor-pointer">
                   {item.name}
                   <span className="absolute bottom-0 left-0 block h-[2px] w-0 bg-[#1dcd9f] transition-all duration-400 group-hover:w-full"></span>
                 </div>
               )}
             </>
           ) : item.type === "content" ? (
-            <div className="relative group font-[Poppins] font-[700]  text-[#777] cursor-pointer flex gap-1 items-center">
+            <div style={{ fontFamily: "Poppins" }} className="relative group font-[Poppins] font-[700]  text-[#777] cursor-pointer flex gap-1 items-center">
               {item.icon}
               {item.name}
             </div>
           ) : item.type === "button" ? (
-            <div className="bg-[#ff0b55] hover:bg-transparent transition-all ease-in-out duration-200 border-2 border-[#ff0b55] relative text-[15px] group font-[Poppins] py-[15px] px-[20px] font-[700] h-[50px] text-[#fff] cursor-pointer flex gap-1 justify-center items-center rounded-4xl">
+            <div style={{ fontFamily: "Poppins" }} className="bg-[#ff0b55] hover:bg-transparent transition-all ease-in-out duration-200 border-2 border-[#ff0b55] relative text-[15px] group font-[Poppins] py-[15px] px-[20px] font-[700] h-[50px] text-[#fff] cursor-pointer flex gap-1 justify-center items-center rounded-4xl">
               {item.name}
             </div>
           ) : null}

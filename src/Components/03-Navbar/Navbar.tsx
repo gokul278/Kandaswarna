@@ -145,7 +145,7 @@ const Navbar: React.FC<NavbarProps> = () => {
             <>
               {item.isMultiple ? (
                 <div className="group relative">
-                  <div className="flex font-[Poppins] font-[700] text-[#fff] cursor-pointer justify-center items-center gap-[4px]">
+                  <div style={{ fontFamily: "Poppins" }} className="flex font-[Poppins] font-[700] text-[#fff] cursor-pointer justify-center items-center gap-[4px]">
                     {item.name}{" "}
                     <ChevronDown className="w-[13px] h-[13px] transition-transform duration-300 group-hover:rotate-180" />{" "}
                   </div>
@@ -164,6 +164,7 @@ const Navbar: React.FC<NavbarProps> = () => {
                             {item.MultipleVal.map((subItem, subIndex) => (
                               <div>
                                 <a
+                                style={{ fontFamily: "Poppins" }}
                                   key={subIndex}
                                   href={subItem.link} // Use subItem.link
                                   className="block w-[180px] px-4 py-[5px] text-[12px] font-[Poppins] font-[700] text-gray-600 hover:text-gray-900"
@@ -173,7 +174,7 @@ const Navbar: React.FC<NavbarProps> = () => {
                                 </a>
                                 {subItem.subNav.map((item) => (
                                   <>
-                                    <div className="block w-[180px] cursor-pointer items-center px-4 mb-0 h-[30px] text-sm text-[12px] font-[Poppins] font-[400] text-gray-600 hover:text-gray-900">
+                                    <div style={{ fontFamily: "Poppins" }} className="block w-[180px] cursor-pointer items-center px-4 mb-0 h-[30px] text-sm text-[12px] font-[Poppins] font-[400] text-gray-600 hover:text-gray-900">
                                       {item.heading}
                                       {item.heading === "View All" && (
                                         <span>
@@ -200,6 +201,7 @@ const Navbar: React.FC<NavbarProps> = () => {
                                 <a
                                   key={subIndex}
                                   href={subItem.link} // Use subItem.link
+                                  style={{ fontFamily: "Poppins" }}
                                   className="block w-[180px] px-4 py-2 text-[12px] font-[Poppins] font-[700] text-gray-600 hover:text-gray-900"
                                   role="menuitem"
                                 >
@@ -207,7 +209,7 @@ const Navbar: React.FC<NavbarProps> = () => {
                                 </a>
                                 {subItem.subNav.map((item) => (
                                   <>
-                                    <div className="flex w-[180px] cursor-pointer items-center px-4 mb-0 h-[30px] text-sm text-[12px] font-[Poppins] font-[400] text-gray-600 hover:text-gray-900">
+                                    <div style={{ fontFamily: "Poppins" }} className="flex w-[180px] cursor-pointer items-center px-4 mb-0 h-[30px] text-sm text-[12px] font-[Poppins] font-[400] text-gray-600 hover:text-gray-900">
                                       {item.heading}
                                       {item.heading === "View All" && (
                                         <span>
@@ -226,7 +228,7 @@ const Navbar: React.FC<NavbarProps> = () => {
                   </div>
                 </div>
               ) : (
-                <div className="relative group font-[Poppins] font-[700] text-[#fff] cursor-pointer">
+                <div style={{ fontFamily: "Poppins" }} className="relative group font-[Poppins] font-[700] text-[#fff] cursor-pointer">
                   {item.name}
                   <span className="absolute bottom-0 left-0 block h-[2px] w-0 bg-[#fff] transition-all duration-400 group-hover:w-full"></span>
                 </div>
@@ -234,14 +236,14 @@ const Navbar: React.FC<NavbarProps> = () => {
             </>
           ) : item.type === "content" ? (
             <>
-              <div className="relative group font-[Poppins] font-[700]  text-[#474747] cursor-pointer flex gap-1 justify-center items-center">
+              <div style={{ fontFamily: "Poppins" }} className="relative group font-[Poppins] font-[700]  text-[#474747] cursor-pointer flex gap-1 justify-center items-center">
                 {item.icon}
                 {item.name}
               </div>
             </>
           ) : item.type === "button" ? (
             <>
-              <div className="bg-[#ff0b55] hover:bg-transparent transition-all ease-in-out duration-200 border-2 border-[#ff0b55] relative text-[15px] group font-[Poppins] py-[15px] px-[20px] font-[700] h-[50px] text-[#fff] cursor-pointer flex gap-1 justify-center items-center rounded-4xl">
+              <div style={{ fontFamily: "Poppins" }} className="bg-[#ff0b55] hover:bg-transparent transition-all ease-in-out duration-200 border-2 border-[#ff0b55] relative text-[15px] group font-[Poppins] py-[15px] px-[20px] font-[700] h-[50px] text-[#fff] cursor-pointer flex gap-1 justify-center items-center rounded-4xl">
                 {item.name}
               </div>
             </>
