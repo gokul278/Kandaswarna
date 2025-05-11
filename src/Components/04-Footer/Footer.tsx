@@ -36,10 +36,10 @@ const Footer: React.FC<FooterProps> = () => {
                 <Phone className="w-[35px] h-[35px] mt-[5px] text-[#fff]" />
               </div>
               <div className="h-[40px] flex flex-col justify-center ">
-                <div className="h-[20px] text-[#fff] font-[Poppins] font-[700] text-[15px]">
+                <div style={{ fontFamily: "Poppins" }} className="h-[20px] text-[#fff] font-[Poppins] font-[700] text-[15px]">
                   +91 9842653413
                 </div>
-                <div className="h-[20px] text-[#fff] font-[Poppins] font-[400] text-[15px]">
+                <div style={{ fontFamily: "Poppins" }} className="h-[20px] text-[#fff] font-[Poppins] font-[400] text-[15px]">
                   Any questions? Call us.
                 </div>
               </div>
@@ -49,10 +49,10 @@ const Footer: React.FC<FooterProps> = () => {
                 <MapPin className="w-[35px] h-[35px] mt-[5px] text-[#fff]" />
               </div>
               <div className="h-[40px] flex flex-col justify-center ">
-                <div className="h-[20px] text-[#fff] font-[Poppins] font-[700] text-[15px]">
+                <div style={{ fontFamily: "Poppins" }} className="h-[20px] text-[#fff] font-[Poppins] font-[700] text-[15px]">
                   19th West Street, Apt 84
                 </div>
-                <div className="h-[20px] text-[#fff] font-[Poppins] font-[400] text-[15px]">
+                <div style={{ fontFamily: "Poppins" }} className="h-[20px] text-[#fff] font-[Poppins] font-[400] text-[15px]">
                   San Francisco, CA 94103
                 </div>
               </div>
@@ -63,7 +63,7 @@ const Footer: React.FC<FooterProps> = () => {
       <div className="w-[100%] bg-[#1dcd9eb8] backdrop-blur-sm flex justify-center items-center border-b-1 border-[#fff]">
         <div className="w-[90%] lg:w-[80%] flex flex-col lg:flex-row justify-between py-15">
           <div className="w-[100%] lg:w-[30%]">
-            <div className="text-[#fff] text-[18px] font-[Poppins] font-[700]">
+            <div style={{ fontFamily: "Poppins" }} className="text-[#fff] text-[18px] font-[Poppins] font-[700]">
               KANDASWARNA
             </div>
             <div className="w-[100%] flex mt-5">
@@ -71,7 +71,7 @@ const Footer: React.FC<FooterProps> = () => {
               <div className="w-[70%] bg-[#fff] h-[3px]"></div>
             </div>
             <img src={logoLight} className=" h-[35px] mt-5" alt="" />
-            <div className="mt-5 text-[#fff] text-[15px] font-[Poppins] font-[500] text-justify">
+            <div style={{ fontFamily: "Poppins" }} className="mt-5 text-[#fff] text-[15px] font-[Poppins] font-[500] text-justify">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente
               rem earum minima voluptatibus odit cumque exercitationem placeat
               deserunt corporis quos! Odio iure molestias eum deserunt dolor.
@@ -79,7 +79,7 @@ const Footer: React.FC<FooterProps> = () => {
             </div>
           </div>
           <div className="w-[30%] flex flex-col mt-10 lg:mt-0">
-            <div className="text-[#fff] text-[18px] font-[Poppins] font-[700]">
+            <div style={{ fontFamily: "Poppins" }} className="text-[#fff] text-[18px] font-[Poppins] font-[700]">
               MENU
             </div>
             <div className="w-[100%] flex mt-5">
@@ -87,38 +87,38 @@ const Footer: React.FC<FooterProps> = () => {
               <div className="w-[70%] bg-[#fff] h-[3px]"></div>
             </div>
             <div>
-              <div className="relative group mt-7 inline-block text-[#fff] text-[15px] font-[Poppins] font-[500] text-justify cursor-pointer">
+              <div style={{ fontFamily: "Poppins" }} className="relative group mt-7 inline-block text-[#fff] text-[15px] font-[Poppins] font-[500] text-justify cursor-pointer">
                 HOME
                 <span className="absolute bottom-0 left-0 block h-[2px] w-0 bg-[#fff] transition-all duration-400 group-hover:w-full"></span>
               </div>
             </div>
             <div>
-              <div className="relative group mt-2 inline-block text-[#fff] text-[15px] font-[Poppins] font-[500] text-justify cursor-pointer">
+              <div style={{ fontFamily: "Poppins" }} className="relative group mt-2 inline-block text-[#fff] text-[15px] font-[Poppins] font-[500] text-justify cursor-pointer">
                 ABOUT
                 <span className="absolute bottom-0 left-0 block h-[2px] w-0 bg-[#fff] transition-all duration-400 group-hover:w-full"></span>
               </div>
             </div>
             <div>
-              <div className="relative group mt-2 inline-block text-[#fff] text-[15px] font-[Poppins] font-[500] text-justify cursor-pointer">
+              <div style={{ fontFamily: "Poppins" }} className="relative group mt-2 inline-block text-[#fff] text-[15px] font-[Poppins] font-[500] text-justify cursor-pointer">
                 SERVICES
                 <span className="absolute bottom-0 left-0 block h-[2px] w-0 bg-[#fff] transition-all duration-400 group-hover:w-full"></span>
               </div>
             </div>
             <div>
-              <div className="relative group mt-2 inline-block text-[#fff] text-[15px] font-[Poppins] font-[500] text-justify cursor-pointer">
+              <div style={{ fontFamily: "Poppins" }} className="relative group mt-2 inline-block text-[#fff] text-[15px] font-[Poppins] font-[500] text-justify cursor-pointer">
                 PRODUCTS
                 <span className="absolute bottom-0 left-0 block h-[2px] w-0 bg-[#fff] transition-all duration-400 group-hover:w-full"></span>
               </div>
             </div>
             <div>
-              <div className="relative group mt-2 inline-block text-[#fff] text-[15px] font-[Poppins] font-[500] text-justify cursor-pointer">
+              <div style={{ fontFamily: "Poppins" }} className="relative group mt-2 inline-block text-[#fff] text-[15px] font-[Poppins] font-[500] text-justify cursor-pointer">
                 CONTACT US
                 <span className="absolute bottom-0 left-0 block h-[2px] w-0 bg-[#fff] transition-all duration-400 group-hover:w-full"></span>
               </div>
             </div>
           </div>
           <div className="w-[30%] flex flex-col mt-10 lg:mt-0">
-            <div className="text-[#fff] text-[18px] font-[Poppins] font-[700]">
+            <div style={{ fontFamily: "Poppins" }} className="text-[#fff] text-[18px] font-[Poppins] font-[700]">
               SERVICES
             </div>
             <div className="w-[100%] flex mt-5">
@@ -126,19 +126,19 @@ const Footer: React.FC<FooterProps> = () => {
               <div className="w-[70%] bg-[#fff] h-[3px]"></div>
             </div>
             <div>
-              <div className="relative group mt-7 inline-block text-[#fff] text-[15px] font-[Poppins] font-[500] text-justify cursor-pointer">
+              <div style={{ fontFamily: "Poppins" }} className="relative group mt-7 inline-block text-[#fff] text-[15px] font-[Poppins] font-[500] text-justify cursor-pointer">
                 Textiles
                 <span className="absolute bottom-0 left-0 block h-[2px] w-0 bg-[#fff] transition-all duration-400 group-hover:w-full"></span>
               </div>
             </div>
             <div>
-              <div className="relative group mt-2 inline-block text-[#fff] text-[15px] font-[Poppins] font-[500] text-justify cursor-pointer">
+              <div style={{ fontFamily: "Poppins" }} className="relative group mt-2 inline-block text-[#fff] text-[15px] font-[Poppins] font-[500] text-justify cursor-pointer">
                 Retail Mall
                 <span className="absolute bottom-0 left-0 block h-[2px] w-0 bg-[#fff] transition-all duration-400 group-hover:w-full"></span>
               </div>
             </div>
             <div>
-              <div className="relative group mt-2 inline-block text-[#fff] text-[15px] font-[Poppins] font-[500] text-justify cursor-pointer">
+              <div style={{ fontFamily: "Poppins" }} className="relative group mt-2 inline-block text-[#fff] text-[15px] font-[Poppins] font-[500] text-justify cursor-pointer">
                 Construction
                 <span className="absolute bottom-0 left-0 block h-[2px] w-0 bg-[#fff] transition-all duration-400 group-hover:w-full"></span>
               </div>
@@ -147,7 +147,7 @@ const Footer: React.FC<FooterProps> = () => {
         </div>
       </div>
       <div className="w-[100%] bg-[#fff] backdrop-blur-sm flex justify-center items-center border-b-1 border-[#fff]">
-        <div className="w-[90%] lg:w-[80%] flex py-5 text-[#7d7a7a] font-[Poppins] font-[400] text-[12px]">
+        <div style={{ fontFamily: "Poppins" }} className="w-[90%] lg:w-[80%] flex py-5 text-[#7d7a7a] font-[Poppins] font-[400] text-[12px]">
           Copyright © 2025, Kandaswarna Groups
         </div>
       </div>
