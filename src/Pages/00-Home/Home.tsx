@@ -4,6 +4,10 @@ import { Carousel } from "react-responsive-carousel";
 import fabrics1 from "../../assets/Images/Fabrics1.jpg";
 import Mall1 from "../../assets/Images/Mall1.jpg";
 import Construction1 from "../../assets/Images/Construction1.jpg";
+import { GrAchievement } from "react-icons/gr";
+import { FaPeopleCarry } from "react-icons/fa";
+import { VscWorkspaceTrusted } from "react-icons/vsc";
+import { RiGlobalLine } from "react-icons/ri";
 
 import "./Home.css";
 import {
@@ -58,13 +62,15 @@ const Home: React.FC<HomeProps> = () => {
                 style={{ fontFamily: "'Playfair Display', serif" }}
                 className="text-[#fff] text-[54px] font-bold"
               >
-                Making your unique Ideas possible.
+                Since 1945 – Kandaswarna Leads in Premium Mall Spaces
               </div>
-              <div style={{ fontFamily: "Poppins" }} className="text-[#fff] text-[19px] font-[600] font-Poppins mt-[20px]">
-                Upgrade now and become a member of <br /> Financer it is
-                available for now!
+              <div
+                style={{ fontFamily: "Poppins" }}
+                className="text-[#fff] text-[19px] font-[600] font-Poppins mt-[20px]"
+              >
+                Explore Salem’s premier retail and textile destination.
               </div>
-              <div className="bg-[#5cdbb9] w-[200px] mt-10 hover:bg-transparent transition-all ease-in-out duration-200 border-2 border-[#5cdbb9] relative text-[15px] group font-[Poppins] py-[15px] px-[20px] font-[700] h-[50px] text-[#fff] cursor-pointer flex gap-1 justify-center items-center rounded-4xl">
+              <div className="bg-[#8db580] w-[200px] mt-10 hover:bg-transparent transition-all ease-in-out duration-200 border-2 border-[#8db580] relative text-[15px] group font-[Poppins] py-[15px] px-[20px] font-[700] h-[50px] text-[#fff] cursor-pointer flex gap-1 justify-center items-center rounded-4xl">
                 Explore More
               </div>
             </div>
@@ -79,13 +85,16 @@ const Home: React.FC<HomeProps> = () => {
                 style={{ fontFamily: "'Playfair Display', serif" }}
                 className="text-[#fff] text-[54px] font-bold"
               >
-                Making your unique Ideas possible.
+                Legacy in Every Thread, Innovation in Every Step
               </div>
-              <div style={{ fontFamily: "Poppins" }} className="text-[#fff] text-[19px] font-[600] font-Poppins mt-[20px]">
-                Upgrade now and become a member of <br /> Financer it is
-                available for now!
+              <div
+                style={{ fontFamily: "Poppins" }}
+                className="text-[#fff] text-[19px] font-[600] font-Poppins mt-[20px]"
+              >
+                From premium mall space for rent to the latest in fashion
+                exports.
               </div>
-              <div className="bg-[#5cdbb9] w-[200px] mt-10 hover:bg-transparent transition-all ease-in-out duration-200 border-2 border-[#5cdbb9] relative text-[15px] group font-[Poppins] py-[15px] px-[20px] font-[700] h-[50px] text-[#fff] cursor-pointer flex gap-1 justify-center items-center rounded-4xl">
+              <div className="bg-[#8db580] w-[200px] mt-10 hover:bg-transparent transition-all ease-in-out duration-200 border-2 border-[#8db580] relative text-[15px] group font-[Poppins] py-[15px] px-[20px] font-[700] h-[50px] text-[#fff] cursor-pointer flex gap-1 justify-center items-center rounded-4xl">
                 Explore More
               </div>
             </div>
@@ -100,13 +109,15 @@ const Home: React.FC<HomeProps> = () => {
                 style={{ fontFamily: "'Playfair Display', serif" }}
                 className="text-[#fff] text-[54px] font-bold"
               >
-                Making your unique Ideas possible.
+                Since 1945 - Global Fashion Exports in Salem
               </div>
-              <div style={{ fontFamily: "Poppins" }} className="text-[#fff] text-[19px] font-[600] font-Poppins mt-[20px]">
-                Upgrade now and become a member of <br /> Financer it is
-                available for now!
+              <div
+                style={{ fontFamily: "Poppins" }}
+                className="text-[#fff] text-[19px] font-[600] font-Poppins mt-[20px]"
+              >
+                Kandaswarna is where tradition meets trend.
               </div>
-              <div className="bg-[#5cdbb9] w-[200px] mt-10 hover:bg-transparent transition-all ease-in-out duration-200 border-2 border-[#5cdbb9] relative text-[15px] group font-[Poppins] py-[15px] px-[20px] font-[700] h-[50px] text-[#fff] cursor-pointer flex gap-1 justify-center items-center rounded-4xl">
+              <div className="bg-[#8db580] w-[200px] mt-10 hover:bg-transparent transition-all ease-in-out duration-200 border-2 border-[#8db580] relative text-[15px] group font-[Poppins] py-[15px] px-[20px] font-[700] h-[50px] text-[#fff] cursor-pointer flex gap-1 justify-center items-center rounded-4xl">
                 Explore More
               </div>
             </div>
@@ -116,9 +127,12 @@ const Home: React.FC<HomeProps> = () => {
 
       {/* About Us */}
       <div className="w-full h-[auto] flex justify-center items-center flex-col pt-10 pb-6">
-        <div style={{ fontFamily: "Poppins" }} className="text-[14px] text-[#9193a4] font-Poppins font-bold flex justify-center items-center flex-col pt-10">
+        <div
+          style={{ fontFamily: "Poppins" }}
+          className="text-[14px] text-[#9193a4] font-Poppins font-bold flex justify-center items-center flex-col pt-10"
+        >
           ABOUT US
-          <div className="w-[30px] h-[2px] bg-[#ff0b55] mt-[20px]"></div>
+          <div className="w-[30px] h-[2px] bg-[#8db580] mt-[20px]"></div>
         </div>
         <div className="w-[100%] flex justify-center items-center py-10">
           <div className="w-[80%] flex justify-between items-center flex-col lg:flex-row">
@@ -128,18 +142,30 @@ const Home: React.FC<HomeProps> = () => {
                   className="text-[#3d404e] text-[44px]"
                   style={{ fontFamily: "'Playfair Display', serif" }}
                 >
-                  Innovative & Reliable & Global.
+                  Our Legacy
                 </div>
-                <div style={{ fontFamily: "Poppins" }} className="text-[#7d7a7a] text-[17px] font-[400] font-Poppins text-justify pt-8 pb-10">
-                  We are a multi-sector enterprise specializing in fabric import
-                  and export, commercial mall development, and infrastructure
-                  construction services. With a global sourcing network and
-                  strong project execution capabilities, we are committed to
-                  delivering premium quality and sustainable growth for our
-                  partners across the textile and real estate industries.
+                <div
+                  style={{ fontFamily: "Poppins" }}
+                  className="text-[#7d7a7a] text-[17px] font-[400] font-Poppins text-justify pt-8 pb-10"
+                >
+                  Founded in 1945 by the visionary (late) Mr. Kandasamy,
+                  Kandaswarna began as a modest textile trading company, dealing
+                  with handloom sarees and dhotis crafted by local artisans.
+                  Over the years, the company flourished under the leadership of
+                  our current chairperson, Mr. Bhuvanendran, who introduced
+                  value-based, niche textile products to domestic and
+                  international markets.
+                  <br />
+                  Today, Kandaswarna is a trusted B2B textile name, known for
+                  its innovative design, fabric excellence, and wholesale
+                  leadership in Tamil Nadu. Based in Salem, we continue to blend
+                  legacy and design to serve the future of fabric.
                 </div>
                 <div className="flex justify-center">
-                  <div style={{ fontFamily: "Poppins" }} className="bg-[#ff0b55] w-[200px] hover:bg-transparent transition-all ease-in-out duration-200 border-2 border-[#ff0b55] relative text-[15px] group font-[Poppins] py-[15px] px-[20px] font-[700] h-[50px] text-[#fff] hover:text-[#ff0b55] cursor-pointer flex gap-1 justify-center items-center rounded-4xl">
+                  <div
+                    style={{ fontFamily: "Poppins" }}
+                    className="bg-[#8db580] w-[200px] hover:bg-transparent transition-all ease-in-out duration-200 border-2 border-[#8db580] relative text-[15px] group font-[Poppins] py-[15px] px-[20px] font-[700] h-[50px] text-[#fff] hover:text-[#8db580] cursor-pointer flex gap-1 justify-center items-center rounded-4xl"
+                  >
                     WHO WE ARE <ArrowUpRight />
                   </div>
                 </div>
@@ -162,28 +188,45 @@ const Home: React.FC<HomeProps> = () => {
             Why We're Trusted
           </div>
           <div className="w-[100%] flex flex-wrap justify-around pt-10 pb-8">
-            <div className="w-[280px] justify-center items-center flex flex-col h-[200px] hover:bg-[#5cdbb92d] transition-all ease-in-out duration-400 mt-5 lg:mt-0">
-              <img className="w-[100px]" src={Logo} alt="" />
-              <div style={{ fontFamily: "Poppins" }} className="text-[18px] font-Poppins text-[#7d7a7a] font-[400] mt-5 w-[100%] text-center">
-                20+ years in global trade & real estate
+            <div className="w-[280px] justify-center items-center flex flex-col h-[200px] hover:bg-[#8db5802d] transition-all ease-in-out duration-400 mt-5 lg:mt-0">
+              {/* <img className="w-[100px]" src={Logo} alt="" /> */}
+              <GrAchievement className="text-5xl text-[#a8862f]" />
+              <div
+                style={{ fontFamily: "Poppins" }}
+                className="text-[18px] font-Poppins text-[#7d7a7a] font-[400] mt-5 w-[100%] text-center"
+              >
+                75+ Years of Textile Excellence
               </div>
             </div>
-            <div className="w-[280px] justify-center items-center flex flex-col h-[200px] hover:bg-[#5cdbb92d] transition-all ease-in-out duration-400 mt-5 lg:mt-0">
-              <img className="w-[100px]" src={Logo} alt="" />
-              <div style={{ fontFamily: "Poppins" }} className="text-[18px] font-Poppins text-[#7d7a7a] font-[400] mt-5 w-[100%] text-center">
-                Certified textile sourcing and quality assurance
+            <div className="w-[280px] justify-center items-center flex flex-col h-[200px] hover:bg-[#8db5802d] transition-all ease-in-out duration-400 mt-5 lg:mt-0">
+              {/* <img className="w-[100px]" src={Logo} alt="" /> */}
+              <FaPeopleCarry className="text-5xl text-[#a8862f]" />
+              <div
+                style={{ fontFamily: "Poppins" }}
+                className="text-[18px] font-Poppins text-[#7d7a7a] font-[400] mt-5 w-[100%] text-center"
+              >
+                Leading Textile Wholesaler in Tamil Nadu
               </div>
             </div>
-            <div className="w-[280px] justify-center items-center flex flex-col h-[200px] hover:bg-[#5cdbb92d] transition-all ease-in-out duration-400 mt-5 lg:mt-0">
-              <img className="w-[100px]" src={Logo} alt="" />
-              <div style={{ fontFamily: "Poppins" }} className="text-[18px] font-Poppins text-[#7d7a7a] font-[400] mt-5 w-[100%] text-center">
-                Turnkey construction and retail infrastructure
+            <div className="w-[280px] justify-center items-center flex flex-col h-[200px] hover:bg-[#8db5802d] transition-all ease-in-out duration-400 mt-5 lg:mt-0">
+              {/* <img className="w-[100px]" src={Logo} alt="" /> */}
+              <VscWorkspaceTrusted className="text-5xl font-bold text-[#a8862f] " />
+              <div
+                style={{ fontFamily: "Poppins" }}
+                className="text-[18px] font-Poppins text-[#7d7a7a] font-[400] mt-5 w-[100%] text-center"
+              >
+                International Quality & Design
               </div>
             </div>
-            <div className="w-[280px] justify-center items-center flex flex-col h-[200px] hover:bg-[#5cdbb92d] transition-all ease-in-out duration-400 mt-5 lg:mt-0">
-              <img className="w-[100px]" src={Logo} alt="" />
-              <div style={{ fontFamily: "Poppins" }} className="text-[18px] font-Poppins text-[#7d7a7a] font-[400] mt-5 w-[100%] text-center">
-                Presence across Asia, Middle East & Europe
+            <div className="w-[280px] justify-center items-center flex flex-col h-[200px] hover:bg-[#8db5802d] transition-all ease-in-out duration-400 mt-5 lg:mt-0">
+              {/* <img className="w-[100px]" src={Logo} alt="" /> */}
+
+              <RiGlobalLine className="text-5xl text-[#a8862f] " />
+              <div
+                style={{ fontFamily: "Poppins" }}
+                className="text-[18px] font-Poppins text-[#7d7a7a] font-[400] mt-5 w-[100%] text-center"
+              >
+                Salem-Based, Globally Connected
               </div>
             </div>
           </div>
@@ -198,9 +241,12 @@ const Home: React.FC<HomeProps> = () => {
         <div className="absolute w-[100%] h-[100vh] flex justify-center items-center">
           <div className="w-[80%] flex flex-col lg:flex-row justify-between">
             <div className="w-[100%] lg:w-[30%]">
-              <div style={{ fontFamily: "Poppins" }} className="text-[14px] text-[#fff] font-Poppins font-bold flex  flex-col pt-10">
+              <div
+                style={{ fontFamily: "Poppins" }}
+                className="text-[14px] text-[#fff] font-Poppins font-bold flex  flex-col pt-10"
+              >
                 Our Servies
-                <div className="w-[30px] h-[2px] bg-[#5cdbb9] mt-[20px]"></div>
+                <div className="w-[30px] h-[2px] bg-[#8db580] mt-[20px]"></div>
               </div>
               <div
                 className="text-[#fff] w-100%[] text-[25px] lg:text-[44px] pt-6 lg:pt-10"
@@ -228,25 +274,40 @@ const Home: React.FC<HomeProps> = () => {
                   >
                     Textile Import & Export
                   </div>
-                  <div style={{ fontFamily: "Poppins" }} className="text-[16px] lg:text-[18px] font-Poppins text-[#7d7a7a] font-[400] text-center pt-5">
+                  <div
+                    style={{ fontFamily: "Poppins" }}
+                    className="text-[16px] lg:text-[18px] font-Poppins text-[#7d7a7a] font-[400] text-center pt-5"
+                  >
                     As a leading textile trading company, we supply and export a
                     wide range of fabrics including cotton, silk, polyester,
                     viscose, and blended textiles.
                   </div>
                   <div className="flex flex-col gap-4 mt-5">
-                    <div style={{ fontFamily: "Poppins" }} className="text-[14px] font-Poppins text-[#fff] font-[400] text-center flex gap-2">
+                    <div
+                      style={{ fontFamily: "Poppins" }}
+                      className="text-[14px] font-Poppins text-[#fff] font-[400] text-center flex gap-2"
+                    >
                       <ArrowRight />
                       Global Sourcing & Distribution
                     </div>
-                    <div style={{ fontFamily: "Poppins" }} className="text-[14px] font-Poppins text-[#fff] font-[400] text-center flex gap-2">
+                    <div
+                      style={{ fontFamily: "Poppins" }}
+                      className="text-[14px] font-Poppins text-[#fff] font-[400] text-center flex gap-2"
+                    >
                       <ArrowRight />
                       Custom Orders & Bulk Supply
                     </div>
-                    <div style={{ fontFamily: "Poppins" }} className="text-[14px] font-Poppins text-[#fff] font-[400] text-center flex gap-2">
+                    <div
+                      style={{ fontFamily: "Poppins" }}
+                      className="text-[14px] font-Poppins text-[#fff] font-[400] text-center flex gap-2"
+                    >
                       <ArrowRight />
                       Fabric Quality Certifications
                     </div>
-                    <div style={{ fontFamily: "Poppins" }} className="text-[14px] font-Poppins text-[#fff] font-[400] text-center flex gap-2">
+                    <div
+                      style={{ fontFamily: "Poppins" }}
+                      className="text-[14px] font-Poppins text-[#fff] font-[400] text-center flex gap-2"
+                    >
                       <ArrowRight />
                       On-time Logistics & Delivery
                     </div>
@@ -259,25 +320,43 @@ const Home: React.FC<HomeProps> = () => {
                   >
                     Mall Development
                   </div>
-                  <div style={{ fontFamily: "Poppins" }} className="text-[16px] lg:text-[18px] font-Poppins text-[#7d7a7a] font-[400] text-center pt-5">
+                  <div
+                    style={{ fontFamily: "Poppins" }}
+                    className="text-[16px] lg:text-[18px] font-Poppins text-[#7d7a7a] font-[400] text-center pt-5"
+                  >
                     Our team designs and delivers innovative commercial malls
                     and retail spaces that drive business and enhance urban
                     life.
                   </div>
-                  <div style={{ fontFamily: "Poppins" }} className="flex flex-col gap-4 mt-5">
-                    <div style={{ fontFamily: "Poppins" }} className="text-[14px] font-Poppins text-[#fff] font-[400] text-center flex gap-2">
+                  <div
+                    style={{ fontFamily: "Poppins" }}
+                    className="flex flex-col gap-4 mt-5"
+                  >
+                    <div
+                      style={{ fontFamily: "Poppins" }}
+                      className="text-[14px] font-Poppins text-[#fff] font-[400] text-center flex gap-2"
+                    >
                       <ArrowRight />
                       Concept-to-Completion Development
                     </div>
-                    <div style={{ fontFamily: "Poppins" }} className="text-[14px] font-Poppins text-[#fff] font-[400] text-center flex gap-2">
+                    <div
+                      style={{ fontFamily: "Poppins" }}
+                      className="text-[14px] font-Poppins text-[#fff] font-[400] text-center flex gap-2"
+                    >
                       <ArrowRight />
                       Strategic Location Planning
                     </div>
-                    <div style={{ fontFamily: "Poppins" }} className="text-[14px] font-Poppins text-[#fff] font-[400] text-center flex gap-2">
+                    <div
+                      style={{ fontFamily: "Poppins" }}
+                      className="text-[14px] font-Poppins text-[#fff] font-[400] text-center flex gap-2"
+                    >
                       <ArrowRight />
                       Leasing & Retail Partner Network
                     </div>
-                    <div style={{ fontFamily: "Poppins" }} className="text-[14px] font-Poppins text-[#fff] font-[400] text-center flex gap-2">
+                    <div
+                      style={{ fontFamily: "Poppins" }}
+                      className="text-[14px] font-Poppins text-[#fff] font-[400] text-center flex gap-2"
+                    >
                       <ArrowRight />
                       Smart Architecture & Urban Design
                     </div>
@@ -296,19 +375,31 @@ const Home: React.FC<HomeProps> = () => {
                     quality, safety, and sustainability.
                   </div>
                   <div className="flex flex-col gap-4 mt-5">
-                    <div style={{ fontFamily: "Poppins" }} className="text-[14px] font-Poppins text-[#fff] font-[400] text-start flex gap-2">
+                    <div
+                      style={{ fontFamily: "Poppins" }}
+                      className="text-[14px] font-Poppins text-[#fff] font-[400] text-start flex gap-2"
+                    >
                       <ArrowRight />
                       Residential, Commercial & Industrial Projects
                     </div>
-                    <div style={{ fontFamily: "Poppins" }} className="text-[14px] font-Poppins text-[#fff] font-[400] text-center flex gap-2">
+                    <div
+                      style={{ fontFamily: "Poppins" }}
+                      className="text-[14px] font-Poppins text-[#fff] font-[400] text-center flex gap-2"
+                    >
                       <ArrowRight />
                       In-House Architects & Engineers
                     </div>
-                    <div style={{ fontFamily: "Poppins" }} className="text-[14px] font-Poppins text-[#fff] font-[400] text-center flex gap-2">
+                    <div
+                      style={{ fontFamily: "Poppins" }}
+                      className="text-[14px] font-Poppins text-[#fff] font-[400] text-center flex gap-2"
+                    >
                       <ArrowRight />
                       Modern Construction Technology
                     </div>
-                    <div style={{ fontFamily: "Poppins" }} className="text-[14px] font-Poppins text-[#fff] font-[400] text-center flex gap-2">
+                    <div
+                      style={{ fontFamily: "Poppins" }}
+                      className="text-[14px] font-Poppins text-[#fff] font-[400] text-center flex gap-2"
+                    >
                       <ArrowRight />
                       On-Time, Budget-Conscious Delivery
                     </div>
@@ -322,7 +413,7 @@ const Home: React.FC<HomeProps> = () => {
                   <div className="">
                     <button
                       onClick={handlePrev}
-                      className="bg-[#5cdbb9] text-white p-2 rounded"
+                      className="bg-[#8db580] text-white p-2 rounded"
                     >
                       <ChevronLeft />
                     </button>
@@ -330,7 +421,7 @@ const Home: React.FC<HomeProps> = () => {
                   <div className="">
                     <button
                       onClick={handleNext}
-                      className="bg-[#5cdbb9] text-white p-2 rounded"
+                      className="bg-[#8db580] text-white p-2 rounded"
                     >
                       <ChevronRight />
                     </button>
@@ -344,9 +435,12 @@ const Home: React.FC<HomeProps> = () => {
 
       {/* Project */}
       <div className="w-full flex justify-center items-center flex-col py-10">
-        <div style={{ fontFamily: "Poppins" }} className="text-[14px] text-[#9193a4] font-Poppins font-bold flex justify-center items-center flex-col pt-10">
+        <div
+          style={{ fontFamily: "Poppins" }}
+          className="text-[14px] text-[#9193a4] font-Poppins font-bold flex justify-center items-center flex-col pt-10"
+        >
           OUR PROJECTS
-          <div className="w-[30px] h-[2px] bg-[#ff0b55] mt-[20px]"></div>
+          <div className="w-[30px] h-[2px] bg-[#8db580] mt-[20px]"></div>
         </div>
         <div className="w-[80%] flex justify-center flex-col">
           <div
@@ -410,7 +504,10 @@ const Home: React.FC<HomeProps> = () => {
             </div>
           </div>
           <div className="flex justify-center pt-5 pb-5">
-            <div style={{ fontFamily: "Poppins" }} className="bg-[#ff0b55] w-[200px] hover:bg-transparent transition-all ease-in-out duration-200 border-2 border-[#ff0b55] relative text-[15px] group font-[Poppins] py-[15px] px-[20px] font-[700] h-[50px] text-[#fff] hover:text-[#ff0b55] cursor-pointer flex gap-1 justify-center items-center rounded-4xl">
+            <div
+              style={{ fontFamily: "Poppins" }}
+              className="bg-[#8db580] w-[200px] hover:bg-transparent transition-all ease-in-out duration-200 border-2 border-[#8db580] relative text-[15px] group font-[Poppins] py-[15px] px-[20px] font-[700] h-[50px] text-[#fff] hover:text-[#8db580] cursor-pointer flex gap-1 justify-center items-center rounded-4xl"
+            >
               Load More <ArrowUpRight />
             </div>
           </div>
@@ -419,9 +516,12 @@ const Home: React.FC<HomeProps> = () => {
 
       {/* Testimonials */}
       <div className="w-full flex justify-center items-center flex-col py-10">
-        <div style={{ fontFamily: "Poppins" }} className="text-[14px] text-[#9193a4] font-Poppins font-bold flex justify-center items-center flex-col pt-10">
+        <div
+          style={{ fontFamily: "Poppins" }}
+          className="text-[14px] text-[#9193a4] font-Poppins font-bold flex justify-center items-center flex-col pt-10"
+        >
           HAPPY CLIENTS
-          <div className="w-[30px] h-[2px] bg-[#ff0b55] mt-[20px]"></div>
+          <div className="w-[30px] h-[2px] bg-[#8db580] mt-[20px]"></div>
         </div>
         <div className="w-[80%] flex justify-center flex-col">
           <div
@@ -665,7 +765,7 @@ const Home: React.FC<HomeProps> = () => {
               className="w-[100%] text-[14px] text-[#9193a4] font-Poppins font-bold flex-col pt-10"
             >
               Contact Us
-              <div className="w-[30px] h-[2px] bg-[#ff0b55] mt-[20px]"></div>
+              <div className="w-[30px] h-[2px] bg-[#8db580] mt-[20px]"></div>
             </div>
             <div
               style={{ fontFamily: "'Playfair Display', serif" }}
@@ -703,7 +803,10 @@ const Home: React.FC<HomeProps> = () => {
               />
             </div>
             <div className="mt-10 flex gap-5">
-              <div style={{ fontFamily: "Poppins" }} className="bg-[#ff0b55] w-[200px] hover:bg-transparent transition-all ease-in-out duration-200 border-2 border-[#ff0b55] relative text-[15px] group font-[Poppins] py-[15px] px-[20px] font-[700] h-[50px] text-[#fff] hover:text-[#ff0b55] cursor-pointer flex gap-1 justify-center items-center rounded-4xl">
+              <div
+                style={{ fontFamily: "Poppins" }}
+                className="bg-[#8db580] w-[200px] hover:bg-transparent transition-all ease-in-out duration-200 border-2 border-[#8db580] relative text-[15px] group font-[Poppins] py-[15px] px-[20px] font-[700] h-[50px] text-[#fff] hover:text-[#8db580] cursor-pointer flex gap-1 justify-center items-center rounded-4xl"
+              >
                 Submit <SendHorizontal />
               </div>
             </div>

@@ -14,7 +14,7 @@ interface FooterProps {}
 const Footer: React.FC<FooterProps> = () => {
   return (
     <>
-      <div className="w-[100%] relative bg-[#1dcd9eb8] backdrop-blur-sm flex justify-center items-center border-b-1 border-[#fff] z-0">
+      <div className="w-[100%] relative bg-[#123f49] backdrop-blur-sm flex justify-center items-center border-b-1 border-[#fff] z-0">
         <div className="w-[90%] lg:w-[80%] flex flex-col lg:flex-row justify-center items-center py-10 lg:py-5">
           <div className="w-[100%] lg:w-[45%] flex gap-3 justify-start">
             <div className="w-[40px] group h-[40px] flex justify-around items-center border-2 rounded-4xl hover:border-[#777] transition-all duration-300 cursor-pointer">
@@ -60,14 +60,14 @@ const Footer: React.FC<FooterProps> = () => {
           </div>
         </div>
       </div>
-      <div className="w-[100%] bg-[#1dcd9eb8] backdrop-blur-sm flex justify-center items-center border-b-1 border-[#fff]">
+      <div className="w-[100%] bg-[#123f49] backdrop-blur-sm flex justify-center items-center border-b-1 border-[#fff]">
         <div className="w-[90%] lg:w-[80%] flex flex-col lg:flex-row justify-between py-15">
           <div className="w-[100%] lg:w-[30%]">
             <div style={{ fontFamily: "Poppins" }} className="text-[#fff] text-[18px] font-[Poppins] font-[700]">
               KANDASWARNA
             </div>
             <div className="w-[100%] flex mt-5">
-              <div className="w-[30%] bg-[#ff0b55] h-[3px]"></div>
+              <div className="w-[30%] bg-[#8db580] h-[3px]"></div>
               <div className="w-[70%] bg-[#fff] h-[3px]"></div>
             </div>
             <img src={logoLight} className=" h-[35px] mt-5" alt="" />
@@ -83,7 +83,7 @@ const Footer: React.FC<FooterProps> = () => {
               MENU
             </div>
             <div className="w-[100%] flex mt-5">
-              <div className="w-[30%] bg-[#ff0b55] h-[3px]"></div>
+              <div className="w-[30%] bg-[#8db580] h-[3px]"></div>
               <div className="w-[70%] bg-[#fff] h-[3px]"></div>
             </div>
             <div>
@@ -122,7 +122,7 @@ const Footer: React.FC<FooterProps> = () => {
               SERVICES
             </div>
             <div className="w-[100%] flex mt-5">
-              <div className="w-[30%] bg-[#ff0b55] h-[3px]"></div>
+              <div className="w-[30%] bg-[#8db580] h-[3px]"></div>
               <div className="w-[70%] bg-[#fff] h-[3px]"></div>
             </div>
             <div>

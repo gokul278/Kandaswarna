@@ -243,7 +243,7 @@ const Navbar: React.FC<NavbarProps> = () => {
             </>
           ) : item.type === "button" ? (
             <>
-              <div style={{ fontFamily: "Poppins" }} className="bg-[#ff0b55] hover:bg-transparent transition-all ease-in-out duration-200 border-2 border-[#ff0b55] relative text-[15px] group font-[Poppins] py-[15px] px-[20px] font-[700] h-[50px] text-[#fff] cursor-pointer flex gap-1 justify-center items-center rounded-4xl">
+              <div style={{ fontFamily: "Poppins" }} className="bg-[#8db580] hover:bg-transparent transition-all ease-in-out duration-200 border-2 border-[#8db580] relative text-[15px] group font-[Poppins] py-[15px] px-[20px] font-[700] h-[50px] text-[#fff] cursor-pointer flex gap-1 justify-center items-center rounded-4xl">
                 {item.name}
               </div>
             </>
