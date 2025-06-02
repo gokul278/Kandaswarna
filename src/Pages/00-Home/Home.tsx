@@ -8,6 +8,7 @@ import { GrAchievement } from "react-icons/gr";
 import { FaPeopleCarry } from "react-icons/fa";
 import { VscWorkspaceTrusted } from "react-icons/vsc";
 import { RiGlobalLine } from "react-icons/ri";
+import { FaUserAlt } from "react-icons/fa";
 
 import "./Home.css";
 import {
@@ -542,11 +543,12 @@ const Home: React.FC<HomeProps> = () => {
             >
               <div className="w-full h-[70vh] flex justify-center items-center bg-[#fff]">
                 <div className="w-[100%] h-[60vh] lg:h-[50vh] lg:w-[60%] flex flex-col justify-center items-center border-1 rounded shadow">
-                  <img
+                  {/* <img
                     style={{ width: "80px", height: "80px" }}
                     src={Logo}
                     alt=""
-                  />
+                  /> */}
+                  <FaUserAlt className="text-[#a6852f] text-5xl" />
                   <div
                     style={{ fontFamily: "Poppins" }}
                     className="mt-5 text-[#3d404e] font-[800] text-[18px] lg:text-[22px]"
@@ -646,11 +648,12 @@ const Home: React.FC<HomeProps> = () => {
               </div>
               <div className="w-full h-[70vh] flex justify-center items-center bg-[#fff]">
                 <div className="w-[100%] h-[60vh] lg:h-[50vh] lg:w-[60%] flex flex-col justify-center items-center border-1 rounded shadow">
-                  <img
+                  {/* <img
                     style={{ width: "80px", height: "80px" }}
                     src={Logo}
                     alt=""
-                  />
+                  /> */}
+                  <FaUserAlt className="text-[#a6852f] text-5xl" />
                   <div
                     style={{ fontFamily: "Poppins" }}
                     className="mt-5 text-[#3d404e] font-[800] text-[18px] lg:text-[22px]"
