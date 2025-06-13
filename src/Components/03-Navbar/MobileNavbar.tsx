@@ -21,7 +21,7 @@ const MobileNavbar: React.FC<NavbarProps> = () => {
       MultipleVal: [],
     },
     {
-      name: "SERVICES",
+      name: "OUR BRANDS",
       link: "/about",
       type: "link",
       isMultiple: true,
@@ -131,7 +131,7 @@ const MobileNavbar: React.FC<NavbarProps> = () => {
     },
     {
       name: "CONTACT US",
-      link: "/",
+      link: "/contact",
       type: "button",
       isMultiple: false,
       MultipleVal: [],

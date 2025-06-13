@@ -9,6 +9,7 @@ import { FaPeopleCarry } from "react-icons/fa";
 import { VscWorkspaceTrusted } from "react-icons/vsc";
 import { RiGlobalLine } from "react-icons/ri";
 import { FaUserAlt } from "react-icons/fa";
+import { SiSitepoint } from "react-icons/si";
 
 import "./Home.css";
 import {
@@ -39,6 +40,7 @@ const Home: React.FC<HomeProps> = () => {
   const handlePrev = () => {
     setCurrentSlide((prev: any) => (prev - 1 + totalSlides) % totalSlides);
   };
+  
 
   return (
     <div className="w-full h-[auto] bg-[#fff]">
@@ -63,7 +65,7 @@ const Home: React.FC<HomeProps> = () => {
                 style={{ fontFamily: "'Playfair Display', serif" }}
                 className="text-[#fff] text-[54px] font-bold"
               >
-                Since 1945 – Kandaswarna Leads in Premium Mall Spaces
+                Kandaswarna Leads in Premium Mall Spaces
               </div>
               <div
                 style={{ fontFamily: "Poppins" }}
@@ -149,19 +151,48 @@ const Home: React.FC<HomeProps> = () => {
                   style={{ fontFamily: "Poppins" }}
                   className="text-[#7d7a7a] text-[17px] font-[400] font-Poppins text-justify pt-8 pb-10"
                 >
-                  Founded in 1945 by the visionary (late) Mr. Kandasamy,
-                  Kandaswarna began as a modest textile trading company, dealing
-                  with handloom sarees and dhotis crafted by local artisans.
-                  Over the years, the company flourished under the leadership of
-                  our current chairperson, Mr. Bhuvanendran, who introduced
-                  value-based, niche textile products to domestic and
-                  international markets.
-                  <br />
-                  Today, Kandaswarna is a trusted B2B textile name, known for
-                  its innovative design, fabric excellence, and wholesale
-                  leadership in Tamil Nadu. Based in Salem, we continue to blend
-                  legacy and design to serve the future of fabric.
+                  <div className="flex flex-row gap-4">
+                    {" "}
+                    <span>
+                      {" "}
+                      <SiSitepoint className="text-[#8db580]" />
+                    </span>{" "}
+                    <span>
+                      Founded in 1945 by the visionary (late) Mr. Kandasamy,
+                      Kandaswarna began as a modest textile trading company,
+                      dealing with handloom sarees and dhotis crafted by local
+                      artisans.
+                    </span>
+                  </div>
+                  <div className="flex flex-row gap-4">
+                    {" "}
+                    <span>
+                      {" "}
+                      <SiSitepoint className="text-[#8db580]" />
+                    </span>{" "}
+                    <span>
+                      Over the years, the company flourished under the
+                      leadership of our current chairperson, Mr. Bhuvanendran,
+                      who introduced value-based, niche textile products to
+                      domestic and international markets.
+                    </span>
+                  </div>
+                  <div className="flex flex-row gap-4">
+                    {" "}
+                    <span>
+                      {" "}
+                      <SiSitepoint className="text-[#8db580]" />
+                    </span>{" "}
+                    <span>
+                      Today, Kandaswarna is a trusted B2B textile name, known
+                      for its innovative design, fabric excellence, and
+                      wholesale leadership in Tamil Nadu. Based in Salem, we
+                      continue to blend legacy and design to serve the future of
+                      fabric.
+                    </span>
+                  </div>
                 </div>
+
                 <div className="flex justify-center">
                   <div
                     style={{ fontFamily: "Poppins" }}
@@ -246,7 +277,7 @@ const Home: React.FC<HomeProps> = () => {
                 style={{ fontFamily: "Poppins" }}
                 className="text-[14px] text-[#fff] font-Poppins font-bold flex  flex-col pt-10"
               >
-                Our Servies
+                Our Brands
                 <div className="w-[30px] h-[2px] bg-[#8db580] mt-[20px]"></div>
               </div>
               <div
@@ -273,15 +304,15 @@ const Home: React.FC<HomeProps> = () => {
                     className="text-[#fff] text-[20px] lg:text-[44px] pt-5 lg:pt-10"
                     style={{ fontFamily: "'Playfair Display', serif" }}
                   >
-                    Textile Import & Export
+                    Kandaswarna Mall
                   </div>
                   <div
                     style={{ fontFamily: "Poppins" }}
                     className="text-[16px] lg:text-[18px] font-Poppins text-[#7d7a7a] font-[400] text-center pt-5"
                   >
-                    As a leading textile trading company, we supply and export a
-                    wide range of fabrics including cotton, silk, polyester,
-                    viscose, and blended textiles.
+                    Premium shop spaces in central Salem with high footfall,
+                    great visibility, and customizable layouts — ideal for
+                    boutiques, showrooms, and lifestyle brands.
                   </div>
                   <div className="flex flex-col gap-4 mt-5">
                     <div
@@ -289,21 +320,21 @@ const Home: React.FC<HomeProps> = () => {
                       className="text-[14px] font-Poppins text-[#fff] font-[400] text-center flex gap-2"
                     >
                       <ArrowRight />
-                      Global Sourcing & Distribution
+                      Customizable Layouts for Shops & Showrooms
                     </div>
                     <div
                       style={{ fontFamily: "Poppins" }}
                       className="text-[14px] font-Poppins text-[#fff] font-[400] text-center flex gap-2"
                     >
                       <ArrowRight />
-                      Custom Orders & Bulk Supply
+                      Prime Central Location in Salem
                     </div>
-                    <div
+                    {/* <div
                       style={{ fontFamily: "Poppins" }}
                       className="text-[14px] font-Poppins text-[#fff] font-[400] text-center flex gap-2"
                     >
                       <ArrowRight />
-                      Fabric Quality Certifications
+                      Well-Maintained Facilities and Security
                     </div>
                     <div
                       style={{ fontFamily: "Poppins" }}
@@ -311,7 +342,7 @@ const Home: React.FC<HomeProps> = () => {
                     >
                       <ArrowRight />
                       On-time Logistics & Delivery
-                    </div>
+                    </div> */}
                   </div>
                 </div>
                 <div className="w-[100%] h-[60vh] lg:h-[50vh]">
@@ -319,15 +350,14 @@ const Home: React.FC<HomeProps> = () => {
                     className="text-[#fff] text-[20px] lg:text-[44px] pt-5 lg:pt-10"
                     style={{ fontFamily: "'Playfair Display', serif" }}
                   >
-                    Mall Development
+                    Kandaswarna Clothing
                   </div>
                   <div
                     style={{ fontFamily: "Poppins" }}
                     className="text-[16px] lg:text-[18px] font-Poppins text-[#7d7a7a] font-[400] text-center pt-5"
                   >
-                    Our team designs and delivers innovative commercial malls
-                    and retail spaces that drive business and enhance urban
-                    life.
+                    We import and export trendy, high-quality apparel for men,
+                    women, and kids.
                   </div>
                   <div
                     style={{ fontFamily: "Poppins" }}
@@ -338,32 +368,25 @@ const Home: React.FC<HomeProps> = () => {
                       className="text-[14px] font-Poppins text-[#fff] font-[400] text-center flex gap-2"
                     >
                       <ArrowRight />
-                      Concept-to-Completion Development
+                      Sourcing & Exporting Quality Garments
                     </div>
                     <div
                       style={{ fontFamily: "Poppins" }}
                       className="text-[14px] font-Poppins text-[#fff] font-[400] text-center flex gap-2"
                     >
                       <ArrowRight />
-                      Strategic Location Planning
+                      Custom Bulk Orders for Businesses
                     </div>
                     <div
                       style={{ fontFamily: "Poppins" }}
                       className="text-[14px] font-Poppins text-[#fff] font-[400] text-center flex gap-2"
                     >
                       <ArrowRight />
-                      Leasing & Retail Partner Network
-                    </div>
-                    <div
-                      style={{ fontFamily: "Poppins" }}
-                      className="text-[14px] font-Poppins text-[#fff] font-[400] text-center flex gap-2"
-                    >
-                      <ArrowRight />
-                      Smart Architecture & Urban Design
+                      Trend-Focused Collections Updated Seasonally
                     </div>
                   </div>
                 </div>
-                <div className="w-[100%] h-[60vh] lg:h-[50vh]">
+                {/* <div className="w-[100%] h-[60vh] lg:h-[50vh]">
                   <div
                     className="text-[#fff] text-[20px] lg:text-[44px] pt-5 lg:pt-10"
                     style={{ fontFamily: "'Playfair Display', serif" }}
@@ -405,7 +428,7 @@ const Home: React.FC<HomeProps> = () => {
                       On-Time, Budget-Conscious Delivery
                     </div>
                   </div>
-                </div>
+                </div> */}
               </Carousel>
 
               {/* Custom Next and Back buttons */}

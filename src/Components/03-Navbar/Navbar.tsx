@@ -1,5 +1,6 @@
 import { ChevronDown, MoveRight, Phone } from "lucide-react";
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 interface NavbarProps {}
 
@@ -14,13 +15,13 @@ const Navbar: React.FC<NavbarProps> = () => {
     },
     {
       name: "ABOUT",
-      link: "/",
+      link: "/about",
       type: "link",
       isMultiple: false,
       MultipleVal: [],
     },
     {
-      name: "SERVICES",
+      name: "OUR BRANDS",
       link: "/about",
       type: "link",
       isMultiple: true,
@@ -130,12 +131,13 @@ const Navbar: React.FC<NavbarProps> = () => {
     },
     {
       name: "CONTACT US",
-      link: "/",
+      link: "/contact",
       type: "button",
       isMultiple: false,
       MultipleVal: [],
     },
   ];
+  const navigate = useNavigate();
 
   return (
     <div className="flex w-[100%] h-[100%] gap-[20px] text-[13px] justify-center items-center">
@@ -145,7 +147,11 @@ const Navbar: React.FC<NavbarProps> = () => {
             <>
               {item.isMultiple ? (
                 <div className="group relative">
-                  <div style={{ fontFamily: "Poppins" }} className="flex font-[Poppins] font-[700] text-[#fff] cursor-pointer justify-center items-center gap-[4px]">
+                  <div
+                  onClick={() => navigate(item.link)}
+                    style={{ fontFamily: "Poppins" }}
+                    className="flex font-[Poppins] font-[700] text-[#fff] cursor-pointer justify-center items-center gap-[4px]"
+                  >
                     {item.name}{" "}
                     <ChevronDown className="w-[13px] h-[13px] transition-transform duration-300 group-hover:rotate-180" />{" "}
                   </div>
@@ -164,7 +170,7 @@ const Navbar: React.FC<NavbarProps> = () => {
                             {item.MultipleVal.map((subItem, subIndex) => (
                               <div>
                                 <a
-                                style={{ fontFamily: "Poppins" }}
+                                  style={{ fontFamily: "Poppins" }}
                                   key={subIndex}
                                   href={subItem.link} // Use subItem.link
                                   className="block w-[180px] px-4 py-[5px] text-[12px] font-[Poppins] font-[700] text-gray-600 hover:text-gray-900"
@@ -174,7 +180,10 @@ const Navbar: React.FC<NavbarProps> = () => {
                                 </a>
                                 {subItem.subNav.map((item) => (
                                   <>
-                                    <div style={{ fontFamily: "Poppins" }} className="block w-[180px] cursor-pointer items-center px-4 mb-0 h-[30px] text-sm text-[12px] font-[Poppins] font-[400] text-gray-600 hover:text-gray-900">
+                                    <div
+                                      style={{ fontFamily: "Poppins" }}
+                                      className="block w-[180px] cursor-pointer items-center px-4 mb-0 h-[30px] text-sm text-[12px] font-[Poppins] font-[400] text-gray-600 hover:text-gray-900"
+                                    >
                                       {item.heading}
                                       {item.heading === "View All" && (
                                         <span>
@@ -209,7 +218,10 @@ const Navbar: React.FC<NavbarProps> = () => {
                                 </a>
                                 {subItem.subNav.map((item) => (
                                   <>
-                                    <div style={{ fontFamily: "Poppins" }} className="flex w-[180px] cursor-pointer items-center px-4 mb-0 h-[30px] text-sm text-[12px] font-[Poppins] font-[400] text-gray-600 hover:text-gray-900">
+                                    <div
+                                      style={{ fontFamily: "Poppins" }}
+                                      className="flex w-[180px] cursor-pointer items-center px-4 mb-0 h-[30px] text-sm text-[12px] font-[Poppins] font-[400] text-gray-600 hover:text-gray-900"
+                                    >
                                       {item.heading}
                                       {item.heading === "View All" && (
                                         <span>
@@ -228,7 +240,11 @@ const Navbar: React.FC<NavbarProps> = () => {
                   </div>
                 </div>
               ) : (
-                <div style={{ fontFamily: "Poppins" }} className="relative group font-[Poppins] font-[700] text-[#fff] cursor-pointer">
+                <div
+                  onClick={() => navigate(item.link)}
+                  style={{ fontFamily: "Poppins" }}
+                  className="relative group font-[Poppins] font-[700] text-[#fff] cursor-pointer"
+                >
                   {item.name}
                   <span className="absolute bottom-0 left-0 block h-[2px] w-0 bg-[#fff] transition-all duration-400 group-hover:w-full"></span>
                 </div>
@@ -236,14 +252,22 @@ const Navbar: React.FC<NavbarProps> = () => {
             </>
           ) : item.type === "content" ? (
             <>
-              <div style={{ fontFamily: "Poppins" }} className="relative group font-[Poppins] font-[700]  text-[#474747] cursor-pointer flex gap-1 justify-center items-center">
+              <div
+              onClick={() => navigate(item.link)}
+                style={{ fontFamily: "Poppins" }}
+                className="relative group font-[Poppins] font-[700]  text-[#cac0c0] cursor-pointer flex gap-1 justify-center items-center"
+              >
                 {item.icon}
                 {item.name}
               </div>
             </>
           ) : item.type === "button" ? (
             <>
-              <div style={{ fontFamily: "Poppins" }} className="bg-[#8db580] hover:bg-transparent transition-all ease-in-out duration-200 border-2 border-[#8db580] relative text-[15px] group font-[Poppins] py-[15px] px-[20px] font-[700] h-[50px] text-[#fff] cursor-pointer flex gap-1 justify-center items-center rounded-4xl">
+              <div
+                onClick={() => navigate(item.link)}
+                style={{ fontFamily: "Poppins" }}
+                className="bg-[#8db580] hover:bg-transparent transition-all ease-in-out duration-200 border-2 border-[#8db580] relative text-[15px] group font-[Poppins] py-[15px] px-[20px] font-[700] h-[50px] text-[#fff] cursor-pointer flex gap-1 justify-center items-center rounded-4xl"
+              >
                 {item.name}
               </div>
             </>
