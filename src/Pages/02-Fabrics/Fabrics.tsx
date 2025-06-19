@@ -1,9 +1,9 @@
 import React from "react";
 import FabricsImg from "../../assets/Images/Fabrics2.jpg";
 import { useNavigate } from "react-router-dom";
-import Sarees from "../../assets/Images/Saree1.jpg";
-import SilfSaree from "../../assets/Images/SilkSaree1.jpg";
-import DesignerSaree from "../../assets/Images/DesignerSaree1.jpg";
+// import Sarees from "../../assets/Images/Saree1.jpg";
+// import SilfSaree from "../../assets/Images/SilkSaree1.jpg";
+// import DesignerSaree from "../../assets/Images/DesignerSaree1.jpg";
 import KerealaSaree from "../../assets/Images/KerealaSaree1.jpg";
 import Chudithars from "../../assets/Fabrics/chudi.png";
 import UniformSaree from "../../assets/Images/Uniform Saree1.jpg";

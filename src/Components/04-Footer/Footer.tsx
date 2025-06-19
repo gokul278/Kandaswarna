@@ -7,7 +7,7 @@ import {
   Youtube,
 } from "lucide-react";
 import React from "react";
-import logoLight from "../../assets/Logo/logo-light.png";
+// import logoLight from "../../assets/Logo/logo-light.png";
 import logo from "../../assets/Logo/Logo.png";
 import { useNavigate } from "react-router-dom";
 

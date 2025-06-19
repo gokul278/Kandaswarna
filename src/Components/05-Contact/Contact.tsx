@@ -1,10 +1,10 @@
 import man from "../../assets/Images/man.jpg";
 import { SendHorizontal } from "lucide-react";
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import Contact1 from "../../assets/Images/Contact1.jpg";
 import { Input } from "@/Components/ui/input";
 import { Textarea } from "@/Components/ui/textarea";
-import { ArrowUpRight } from "lucide-react";
+// import { ArrowUpRight } from "lucide-react";
 
 const Contact: React.FC = () => {
   const [name, setName] = useState("");

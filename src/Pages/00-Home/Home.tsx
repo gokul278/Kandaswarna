@@ -3,9 +3,9 @@ import { useEffect } from "react";
 
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from "react-responsive-carousel";
-import fabrics1 from "../../assets/Images/Fabrics1.jpg";
-import Mall1 from "../../assets/Images/Mall1.jpg";
-import Construction1 from "../../assets/Images/Construction1.jpg";
+// import fabrics1 from "../../assets/Images/Fabrics1.jpg";
+// import Mall1 from "../../assets/Images/Mall1.jpg";
+// import Construction1 from "../../assets/Images/Construction1.jpg";
 import { GrAchievement } from "react-icons/gr";
 import { FaPeopleCarry } from "react-icons/fa";
 import { VscWorkspaceTrusted } from "react-icons/vsc";
@@ -15,7 +15,7 @@ import { SiSitepoint } from "react-icons/si";
 import land from "../../assets/Home/land.jpg";
 import mall from "../../assets/Home/mall.jpg";
 import fabric from "../../assets/Home/fabric.jpg";
-import { motion } from "framer-motion";
+// import { motion } from "framer-motion";
 
 import "./Home.css";
 import {
@@ -26,9 +26,9 @@ import {
   SendHorizontal,
 } from "lucide-react";
 import People1 from "../../assets/Images/People1.jpg";
-import Logo from "../../assets/Logo/Logo.png";
+// import Logo from "../../assets/Logo/Logo.png";
 import Team1 from "../../assets/Images/Team1.jpg";
-import Example1 from "../../assets/Images/Example1.jpg";
+// import Example1 from "../../assets/Images/Example1.jpg";
 import Contact1 from "../../assets/Images/Contact1.jpg";
 import { Input } from "@/Components/ui/input";
 import { Textarea } from "@/Components/ui/textarea";

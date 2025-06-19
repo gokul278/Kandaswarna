@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import about from "../../assets/Images/about.jpg";
-import { Description } from "@radix-ui/react-dialog";
+// import { Description } from "@radix-ui/react-dialog";
 import missionimg from "../../assets/Images/mission.jpg";
 import journeyimg from "../../assets/Images/journyimg.jpg";
 

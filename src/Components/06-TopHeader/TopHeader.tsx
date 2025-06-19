@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import { useState } from "react"
 
 export default function TopHeader() {
   const [isToggleOpen, setIsToggleOpen] = useState(false)
