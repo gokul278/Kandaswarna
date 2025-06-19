@@ -129,6 +129,7 @@ const Home: React.FC<HomeProps> = () => {
                   : "opacity-0 translate-y-6 scale-95"
               }`}
               onClick={() => {
+                console.log("clicked");
                 navigate("/fabrics");
                 window.scrollTo({ top: 0, behavior: "smooth" });
               }}
