@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import { useEffect } from "react";
+
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from "react-responsive-carousel";
 import fabrics1 from "../../assets/Images/Fabrics1.jpg";
@@ -10,6 +12,10 @@ import { VscWorkspaceTrusted } from "react-icons/vsc";
 import { RiGlobalLine } from "react-icons/ri";
 import { FaUserAlt } from "react-icons/fa";
 import { SiSitepoint } from "react-icons/si";
+import land from "../../assets/Home/land.jpg";
+import mall from "../../assets/Home/mall.jpg";
+import fabric from "../../assets/Home/fabric.jpg";
+import { motion } from "framer-motion";
 
 import "./Home.css";
 import {
@@ -26,10 +32,28 @@ import Example1 from "../../assets/Images/Example1.jpg";
 import Contact1 from "../../assets/Images/Contact1.jpg";
 import { Input } from "@/Components/ui/input";
 import { Textarea } from "@/Components/ui/textarea";
+import { useNavigate } from "react-router-dom";
 
 interface HomeProps {}
 
 const Home: React.FC<HomeProps> = () => {
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [phone, setPhone] = useState("");
+  const [description, setDescription] = useState("");
+  const navigate = useNavigate();
+
+  const handleClick = (e: any) => {
+    e.preventDefault();
+    const to = " kandaswarnafabrics@gmail.com";
+    const subject = encodeURIComponent("Feedback");
+    const body = encodeURIComponent(
+      `Name: ${name}\nEmail: ${email}\nPhone: ${phone}\n\n\nMessage:\n${description}\n\nBest regards,\n${name}`
+    );
+
+    const mailtoLink = `mailto:${to}?subject=${subject}&body=${body}`;
+    window.location.href = mailtoLink;
+  };
   const [currentSlide, setCurrentSlide] = useState(0);
   const totalSlides = 3;
 
@@ -40,92 +64,199 @@ const Home: React.FC<HomeProps> = () => {
   const handlePrev = () => {
     setCurrentSlide((prev: any) => (prev - 1 + totalSlides) % totalSlides);
   };
-  
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    // Trigger animations on mount
+    const timer = setTimeout(() => {
+      setIsVisible(true);
+    }, 100);
+    return () => clearTimeout(timer);
+  }, []);
 
   return (
     <div className="w-full h-[auto] bg-[#fff]">
-      {/* Carousel */}
-      <div className="w-full h-[100vh]">
-        <Carousel
-          autoPlay
-          infiniteLoop
-          interval={3000}
-          showThumbs={false}
-          showStatus={false}
-          showArrows={false}
-          stopOnHover={false}
+      {/* Top session */}
+
+      <div className="w-full h-auto lg:h-[100vh] flex flex-col lg:flex-row">
+        {/* Section 1 - Fabric */}
+        <div
+          className={`w-full lg:w-1/3 h-[100vh] bg-cover bg-center relative flex justify-center items-center transform transition-all duration-1000 ease-out ${
+            isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+          }`}
+          style={{
+            backgroundImage: `url(${fabric})`,
+            transitionDelay: "0ms",
+          }}
         >
+          <div className="absolute inset-0 bg-[#00000094] transition-opacity duration-700"></div>
           <div
-            className="w-full h-[100vh] bg-cover bg-center flex justify-center items-center"
-            style={{ backgroundImage: `url(${fabrics1})` }}
+            className={`relative w-[90%] flex flex-col justify-center items-center text-center px-4 transform transition-all duration-800 ease-out ${
+              isVisible
+                ? "opacity-100 translate-y-0 scale-100"
+                : "opacity-0 translate-y-12 scale-95"
+            }`}
+            style={{ transitionDelay: "200ms" }}
           >
-            <div className="absolute inset-0 bg-[#00000094]"></div>
-            <div className=" absolute w-[100%] lg:w-[38%] flex flex-col justify-center items-center">
-              <div
-                style={{ fontFamily: "'Playfair Display', serif" }}
-                className="text-[#fff] text-[54px] font-bold"
-              >
-                Kandaswarna Leads in Premium Mall Spaces
-              </div>
-              <div
-                style={{ fontFamily: "Poppins" }}
-                className="text-[#fff] text-[19px] font-[600] font-Poppins mt-[20px]"
-              >
-                Explore Salem’s premier retail and textile destination.
-              </div>
-              <div className="bg-[#8db580] w-[200px] mt-10 hover:bg-transparent transition-all ease-in-out duration-200 border-2 border-[#8db580] relative text-[15px] group font-[Poppins] py-[15px] px-[20px] font-[700] h-[50px] text-[#fff] cursor-pointer flex gap-1 justify-center items-center rounded-4xl">
-                Explore More
-              </div>
+            <div
+              style={{
+                fontFamily: "'Playfair Display', serif",
+                transitionDelay: "400ms",
+              }}
+              className={`text-white text-[28px] md:text-[32px] lg:text-[36px] font-bold transform transition-all duration-700 ease-out ${
+                isVisible
+                  ? "opacity-100 translate-y-0"
+                  : "opacity-0 translate-y-6"
+              }`}
+            >
+              Kandaswarna Fabrics
+            </div>
+            <div
+              style={{ fontFamily: "Poppins", transitionDelay: "600ms" }}
+              className={`text-white text-[14px] md:text-[16px] font-semibold mt-4 transform transition-all duration-700 ease-out ${
+                isVisible
+                  ? "opacity-100 translate-y-0"
+                  : "opacity-0 translate-y-6"
+              }`}
+            >
+              Export & Import of premium fabrics like Sampin, Sarees, Kurtis,
+              and Party Wear.
+            </div>
+            <div
+              className={`bg-[#8db580] w-[160px] md:w-[180px] mt-8 hover:bg-transparent hover:scale-105 transition-all ease-in-out duration-200 border-2 border-[#8db580] text-[14px] font-[700] h-[45px] text-white cursor-pointer flex justify-center items-center rounded-3xl transform ${
+                isVisible
+                  ? "opacity-100 translate-y-0 scale-100"
+                  : "opacity-0 translate-y-6 scale-95"
+              }`}
+              onClick={() => {
+                navigate("/fabrics");
+                window.scrollTo({ top: 0, behavior: "smooth" });
+              }}
+              style={{ transitionDelay: "800ms" }}
+            >
+              Explore More
             </div>
           </div>
+        </div>
+
+        {/* Section 2 - Mall */}
+        <div
+          className={`w-full lg:w-1/3 h-[100vh] bg-cover bg-center relative flex justify-center items-center transform transition-all duration-1000 ease-out ${
+            isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+          }`}
+          style={{
+            backgroundImage: `url(${mall})`,
+            transitionDelay: "300ms",
+          }}
+        >
+          <div className="absolute inset-0 bg-[#00000094] transition-opacity duration-700"></div>
           <div
-            className="w-full h-[100vh] bg-cover bg-center flex justify-center items-center"
-            style={{ backgroundImage: `url(${Mall1})` }}
+            className={`relative w-[90%] flex flex-col justify-center items-center text-center px-4 transform transition-all duration-800 ease-out ${
+              isVisible
+                ? "opacity-100 translate-y-0 scale-100"
+                : "opacity-0 translate-y-12 scale-95"
+            }`}
+            style={{ transitionDelay: "500ms" }}
           >
-            <div className="absolute inset-0 bg-[#00000094]"></div>
-            <div className=" absolute w-[100%] lg:w-[38%] flex flex-col justify-center items-center">
-              <div
-                style={{ fontFamily: "'Playfair Display', serif" }}
-                className="text-[#fff] text-[54px] font-bold"
-              >
-                Legacy in Every Thread, Innovation in Every Step
-              </div>
-              <div
-                style={{ fontFamily: "Poppins" }}
-                className="text-[#fff] text-[19px] font-[600] font-Poppins mt-[20px]"
-              >
-                From premium mall space for rent to the latest in fashion
-                exports.
-              </div>
-              <div className="bg-[#8db580] w-[200px] mt-10 hover:bg-transparent transition-all ease-in-out duration-200 border-2 border-[#8db580] relative text-[15px] group font-[Poppins] py-[15px] px-[20px] font-[700] h-[50px] text-[#fff] cursor-pointer flex gap-1 justify-center items-center rounded-4xl">
-                Explore More
-              </div>
+            <div
+              style={{
+                fontFamily: "'Playfair Display', serif",
+                transitionDelay: "700ms",
+              }}
+              className={`text-white text-[28px] md:text-[32px] lg:text-[36px] font-bold transform transition-all duration-700 ease-out ${
+                isVisible
+                  ? "opacity-100 translate-y-0"
+                  : "opacity-0 translate-y-6"
+              }`}
+            >
+              Kandaswarna Shopping Mall
+            </div>
+            <div
+              style={{ fontFamily: "Poppins", transitionDelay: "900ms" }}
+              className={`text-white text-[14px] md:text-[16px] font-semibold mt-4 transform transition-all duration-700 ease-out ${
+                isVisible
+                  ? "opacity-100 translate-y-0"
+                  : "opacity-0 translate-y-6"
+              }`}
+            >
+              Premium shopping mall space for rent in Prime Spot, Salem
+            </div>
+            <div
+              className={`bg-[#8db580] w-[160px] md:w-[180px] mt-8 hover:bg-transparent hover:scale-105 transition-all ease-in-out duration-200 border-2 border-[#8db580] text-[14px] font-[700] h-[45px] text-white cursor-pointer flex justify-center items-center rounded-3xl transform ${
+                isVisible
+                  ? "opacity-100 translate-y-0 scale-100"
+                  : "opacity-0 translate-y-6 scale-95"
+              }`}
+              style={{ transitionDelay: "1100ms" }}
+                onClick={() => {
+                  navigate("/mall");
+                  window.scrollTo({ top: 0, behavior: "smooth" });
+                }}
+            >
+              Explore More
             </div>
           </div>
+        </div>
+
+        {/* Section 3 - Land */}
+        <div
+          className={`w-full lg:w-1/3 h-[100vh] bg-cover bg-center relative flex justify-center items-center transform transition-all duration-1000 ease-out ${
+            isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+          }`}
+          style={{
+            backgroundImage: `url(${land})`,
+            transitionDelay: "600ms",
+          }}
+        >
+          <div className="absolute inset-0 bg-[#00000094] transition-opacity duration-700"></div>
           <div
-            className="w-full h-[100vh] bg-cover bg-center flex justify-center items-center"
-            style={{ backgroundImage: `url(${Construction1})` }}
+            className={`relative w-[90%] flex flex-col justify-center items-center text-center px-4 transform transition-all duration-800 ease-out ${
+              isVisible
+                ? "opacity-100 translate-y-0 scale-100"
+                : "opacity-0 translate-y-12 scale-95"
+            }`}
+            style={{ transitionDelay: "800ms" }}
           >
-            <div className="absolute inset-0 bg-[#00000094]"></div>
-            <div className=" absolute w-[100%] lg:w-[38%] flex flex-col justify-center items-center">
-              <div
-                style={{ fontFamily: "'Playfair Display', serif" }}
-                className="text-[#fff] text-[54px] font-bold"
-              >
-                Since 1945 - Global Fashion Exports in Salem
-              </div>
-              <div
-                style={{ fontFamily: "Poppins" }}
-                className="text-[#fff] text-[19px] font-[600] font-Poppins mt-[20px]"
-              >
-                Kandaswarna is where tradition meets trend.
-              </div>
-              <div className="bg-[#8db580] w-[200px] mt-10 hover:bg-transparent transition-all ease-in-out duration-200 border-2 border-[#8db580] relative text-[15px] group font-[Poppins] py-[15px] px-[20px] font-[700] h-[50px] text-[#fff] cursor-pointer flex gap-1 justify-center items-center rounded-4xl">
-                Explore More
-              </div>
+            <div
+              style={{
+                fontFamily: "'Playfair Display', serif",
+                transitionDelay: "1000ms",
+              }}
+              className={`text-white text-[28px] md:text-[32px] lg:text-[36px] font-bold transform transition-all duration-700 ease-out ${
+                isVisible
+                  ? "opacity-100 translate-y-0"
+                  : "opacity-0 translate-y-6"
+              }`}
+            >
+              Kandaswarnaa Hi Tech City
+            </div>
+            <div
+              style={{ fontFamily: "Poppins", transitionDelay: "1200ms" }}
+              className={`text-white text-[14px] md:text-[16px] font-semibold mt-4 transform transition-all duration-700 ease-out ${
+                isVisible
+                  ? "opacity-100 translate-y-0"
+                  : "opacity-0 translate-y-6"
+              }`}
+            >
+              Premium Shopping Mall Space for Rental in Prime Location of Salem
+              - Bangalore Highway
+            </div>
+            <div
+              className={`bg-[#8db580] w-[160px] md:w-[180px] mt-8 hover:bg-transparent hover:scale-105 transition-all ease-in-out duration-200 border-2 border-[#8db580] text-[14px] font-[700] h-[45px] text-white cursor-pointer flex justify-center items-center rounded-3xl transform ${
+                isVisible
+                  ? "opacity-100 translate-y-0 scale-100"
+                  : "opacity-0 translate-y-6 scale-95"
+              }`}
+              style={{ transitionDelay: "1400ms" }}
+                onClick={() => {
+                  navigate("/hitechcity");
+                  window.scrollTo({ top: 0, behavior: "smooth" });
+                }}
+            >
+              Explore More
             </div>
           </div>
-        </Carousel>
+        </div>
       </div>
 
       {/* About Us */}
@@ -172,9 +303,9 @@ const Home: React.FC<HomeProps> = () => {
                     </span>{" "}
                     <span>
                       Over the years, the company flourished under the
-                      leadership of our current chairperson, Mr. Bhuvanendran,
-                      who introduced value-based, niche textile products to
-                      domestic and international markets.
+                      leadership of our current chairperson, Mr.K.B.Srinivasan
+                      and Mrs.Kandaswarna who introduced value-based, niche
+                      textile products to domestic and international markets.
                     </span>
                   </div>
                   <div className="flex flex-row gap-4">
@@ -195,6 +326,11 @@ const Home: React.FC<HomeProps> = () => {
 
                 <div className="flex justify-center">
                   <div
+                    onClick={() => {
+                      navigate("/about");
+                      console.log("clicked");
+                      window.scrollTo({ top: 0, behavior: "smooth" });
+                    }}
                     style={{ fontFamily: "Poppins" }}
                     className="bg-[#8db580] w-[200px] hover:bg-transparent transition-all ease-in-out duration-200 border-2 border-[#8db580] relative text-[15px] group font-[Poppins] py-[15px] px-[20px] font-[700] h-[50px] text-[#fff] hover:text-[#8db580] cursor-pointer flex gap-1 justify-center items-center rounded-4xl"
                   >
@@ -222,7 +358,7 @@ const Home: React.FC<HomeProps> = () => {
           <div className="w-[100%] flex flex-wrap justify-around pt-10 pb-8">
             <div className="w-[280px] justify-center items-center flex flex-col h-[200px] hover:bg-[#8db5802d] transition-all ease-in-out duration-400 mt-5 lg:mt-0">
               {/* <img className="w-[100px]" src={Logo} alt="" /> */}
-              <GrAchievement className="text-5xl text-[#a8862f]" />
+              <GrAchievement className="text-5xl text-[#a8862f] " />
               <div
                 style={{ fontFamily: "Poppins" }}
                 className="text-[18px] font-Poppins text-[#7d7a7a] font-[400] mt-5 w-[100%] text-center"
@@ -304,7 +440,48 @@ const Home: React.FC<HomeProps> = () => {
                     className="text-[#fff] text-[20px] lg:text-[44px] pt-5 lg:pt-10"
                     style={{ fontFamily: "'Playfair Display', serif" }}
                   >
-                    Kandaswarna Mall
+                    Kandaswarna Fabrics
+                  </div>
+                  <div
+                    style={{ fontFamily: "Poppins" }}
+                    className="text-[16px] lg:text-[18px] font-Poppins text-[#7d7a7a] font-[400] text-center pt-5"
+                  >
+                    We import and export trendy, high-quality apparel for men,
+                    women, and kids.
+                  </div>
+                  <div
+                    style={{ fontFamily: "Poppins" }}
+                    className="flex flex-col gap-4 mt-5"
+                  >
+                    <div
+                      style={{ fontFamily: "Poppins" }}
+                      className="text-[14px] font-Poppins text-[#fff] font-[400] text-center flex gap-2"
+                    >
+                      <ArrowRight />
+                      Sourcing & Exporting Quality Garments
+                    </div>
+                    <div
+                      style={{ fontFamily: "Poppins" }}
+                      className="text-[14px] font-Poppins text-[#fff] font-[400] text-center flex gap-2"
+                    >
+                      <ArrowRight />
+                      Custom Bulk Orders for Businesses
+                    </div>
+                    <div
+                      style={{ fontFamily: "Poppins" }}
+                      className="text-[14px] font-Poppins text-[#fff] font-[400] text-center flex gap-2"
+                    >
+                      <ArrowRight />
+                      Trend-Focused Collections Updated Seasonally
+                    </div>
+                  </div>
+                </div>
+                <div className="w-[100%] h-[60vh] lg:h-[50vh]">
+                  <div
+                    className="text-[#fff] text-[20px] lg:text-[44px] pt-5 lg:pt-10"
+                    style={{ fontFamily: "'Playfair Display', serif" }}
+                  >
+                    Kandaswarna Shopping Mall
                   </div>
                   <div
                     style={{ fontFamily: "Poppins" }}
@@ -345,53 +522,13 @@ const Home: React.FC<HomeProps> = () => {
                     </div> */}
                   </div>
                 </div>
+
                 <div className="w-[100%] h-[60vh] lg:h-[50vh]">
                   <div
                     className="text-[#fff] text-[20px] lg:text-[44px] pt-5 lg:pt-10"
                     style={{ fontFamily: "'Playfair Display', serif" }}
                   >
-                    Kandaswarna Clothing
-                  </div>
-                  <div
-                    style={{ fontFamily: "Poppins" }}
-                    className="text-[16px] lg:text-[18px] font-Poppins text-[#7d7a7a] font-[400] text-center pt-5"
-                  >
-                    We import and export trendy, high-quality apparel for men,
-                    women, and kids.
-                  </div>
-                  <div
-                    style={{ fontFamily: "Poppins" }}
-                    className="flex flex-col gap-4 mt-5"
-                  >
-                    <div
-                      style={{ fontFamily: "Poppins" }}
-                      className="text-[14px] font-Poppins text-[#fff] font-[400] text-center flex gap-2"
-                    >
-                      <ArrowRight />
-                      Sourcing & Exporting Quality Garments
-                    </div>
-                    <div
-                      style={{ fontFamily: "Poppins" }}
-                      className="text-[14px] font-Poppins text-[#fff] font-[400] text-center flex gap-2"
-                    >
-                      <ArrowRight />
-                      Custom Bulk Orders for Businesses
-                    </div>
-                    <div
-                      style={{ fontFamily: "Poppins" }}
-                      className="text-[14px] font-Poppins text-[#fff] font-[400] text-center flex gap-2"
-                    >
-                      <ArrowRight />
-                      Trend-Focused Collections Updated Seasonally
-                    </div>
-                  </div>
-                </div>
-                {/* <div className="w-[100%] h-[60vh] lg:h-[50vh]">
-                  <div
-                    className="text-[#fff] text-[20px] lg:text-[44px] pt-5 lg:pt-10"
-                    style={{ fontFamily: "'Playfair Display', serif" }}
-                  >
-                    Construction & Infrastructure
+                    Kandaswarnaa Hi Tech City
                   </div>
                   <div className="text-[16px] lg:text-[18px] font-Poppins text-[#7d7a7a] font-[400] text-center pt-5">
                     We offer turnkey construction solutions - from high-rise
@@ -428,7 +565,7 @@ const Home: React.FC<HomeProps> = () => {
                       On-Time, Budget-Conscious Delivery
                     </div>
                   </div>
-                </div> */}
+                </div>
               </Carousel>
 
               {/* Custom Next and Back buttons */}
@@ -458,7 +595,7 @@ const Home: React.FC<HomeProps> = () => {
       </div>
 
       {/* Project */}
-      <div className="w-full flex justify-center items-center flex-col py-10">
+      {/* <div className="w-full flex justify-center items-center flex-col py-10">
         <div
           style={{ fontFamily: "Poppins" }}
           className="text-[14px] text-[#9193a4] font-Poppins font-bold flex justify-center items-center flex-col pt-10"
@@ -536,7 +673,7 @@ const Home: React.FC<HomeProps> = () => {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
 
       {/* Testimonials */}
       <div className="w-full flex justify-center items-center flex-col py-10">
@@ -781,7 +918,7 @@ const Home: React.FC<HomeProps> = () => {
 
       {/* Contact Us */}
       <div
-        className="w-full h-[80vh] flex justify-center items-center flex-row py-10 bg-center bg-cover"
+        className="w-full h-[100vh] flex justify-center items-center flex-row py-10 bg-center bg-cover"
         style={{ backgroundImage: `url(${Contact1})` }}
       >
         <div className="w-[80%] flex justify-center items-center">
@@ -802,12 +939,20 @@ const Home: React.FC<HomeProps> = () => {
             <div className="w-[100%] mt-5 flex gap-5">
               <Input
                 type="text"
+                id="name"
+                name="name"
+                value={name}
+                onChange={(e) => setName(e.target.value)}
                 className="h-[50px] text-[14px]"
                 style={{ fontFamily: "Poppins" }}
                 placeholder="Enter Name"
               />
               <Input
+                id="email"
+                name="email"
                 type="email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
                 className="h-[50px] text-[14px]"
                 style={{ fontFamily: "Poppins" }}
                 placeholder="Enter Email"
@@ -815,23 +960,32 @@ const Home: React.FC<HomeProps> = () => {
             </div>
             <div className="mt-5 flex gap-5">
               <Input
-                type="text"
+                id="mobile"
+                name="mobile"
+                type="tel"
+                value={phone}
+                onChange={(e) => setPhone(e.target.value)}
                 className="h-[50px] text-[14px]"
                 style={{ fontFamily: "Poppins" }}
-                placeholder="Enter Subject"
+                placeholder="Enter Mobile Number"
               />
             </div>
             <div className="mt-5 flex gap-5">
               <Textarea
+                id="message"
+                name="message"
+                value={description}
+                onChange={(e) => setDescription(e.target.value)}
                 className="h-[80px] text-[14px]"
                 style={{ fontFamily: "Poppins" }}
-                placeholder="Enter Subject"
+                placeholder="Enter Message"
               />
             </div>
             <div className="mt-10 flex gap-5">
               <div
                 style={{ fontFamily: "Poppins" }}
                 className="bg-[#8db580] w-[200px] hover:bg-transparent transition-all ease-in-out duration-200 border-2 border-[#8db580] relative text-[15px] group font-[Poppins] py-[15px] px-[20px] font-[700] h-[50px] text-[#fff] hover:text-[#8db580] cursor-pointer flex gap-1 justify-center items-center rounded-4xl"
+                onClick={handleClick}
               >
                 Submit <SendHorizontal />
               </div>

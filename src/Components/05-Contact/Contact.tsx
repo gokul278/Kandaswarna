@@ -1,13 +1,28 @@
-import React from "react";
 import man from "../../assets/Images/man.jpg";
 import { SendHorizontal } from "lucide-react";
-
+import React, { useState, useEffect } from "react";
 import Contact1 from "../../assets/Images/Contact1.jpg";
 import { Input } from "@/Components/ui/input";
 import { Textarea } from "@/Components/ui/textarea";
 import { ArrowUpRight } from "lucide-react";
 
 const Contact: React.FC = () => {
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [phone, setPhone] = useState("");
+  const [description, setDescription] = useState("");
+
+  const handleClick = (e: any) => {
+    e.preventDefault();
+    const to = "kandaswarnafabrics@gmail.com";
+    const subject = encodeURIComponent("Feedback");
+    const body = encodeURIComponent(
+      `Name: ${name}\nEmail: ${email}\nPhone: ${phone}\n\n\nMessage:\n${description}\n\nBest regards,\n${name}`
+    );
+
+    const mailtoLink = `mailto:${to}?subject=${subject}&body=${body}`;
+    window.location.href = mailtoLink;
+  };
   return (
     <div className="w-full h-auto bg-white">
       <div className="w-full">
@@ -32,21 +47,22 @@ const Contact: React.FC = () => {
               Contact Us
             </div>
             <div>
-              19, Manivannan Road, Opp Salem New Bus Stand, Salem - 636004
+              No. 19-b, Kandaswarna Corporate house, Ramakrishna Road, Salem,
+              Tamil Nadu 636007
             </div>
             <div
               className="text-[#6d6d6e] text-sm uppercase font-bold mt-5  "
               style={{ fontFamily: "Poppins" }}
             >
-              +91-XXXXXXXXXX{" "}
+              +91-98436 49195, +91-94433 64578
             </div>
             <div className="mt-5">
               <a
-                href="mailto:kandaswarnaco@gmail.com"
+                href="mailto:kandaswarnafabrics@gmail.com"
                 className="text-[#3d404e] hover:text-[#8db580] underline"
                 style={{ fontFamily: "Poppins" }}
               >
-                kandaswarnaco@gmail.com
+                kandaswarnafabrics@gmail.com
               </a>
             </div>
           </div>
@@ -89,12 +105,21 @@ const Contact: React.FC = () => {
               <div className="mt-5 flex flex-col md:flex-row gap-5">
                 <Input
                   type="text"
+                  id="name"
+                  name="name"
+                  value={name}
+                  onChange={(e) => setName(e.target.value)}
                   className="h-[50px] text-[14px] w-full"
                   style={{ fontFamily: "Poppins" }}
                   placeholder="Enter Name"
+                  required
                 />
                 <Input
+                  id="email"
+                  name="email"
                   type="email"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
                   className="h-[50px] text-[14px] w-full"
                   style={{ fontFamily: "Poppins" }}
                   placeholder="Enter Email"
@@ -103,15 +128,23 @@ const Contact: React.FC = () => {
 
               <div className="mt-5">
                 <Input
-                  type="text"
+                  id="mobile"
+                  name="mobile"
+                  type="tel"
+                  value={phone}
+                  onChange={(e) => setPhone(e.target.value)}
                   className="h-[50px] text-[14px] w-full"
                   style={{ fontFamily: "Poppins" }}
-                  placeholder="Enter Subject"
+                  placeholder="Enter Mobile Number"
                 />
               </div>
 
               <div className="mt-5">
                 <Textarea
+                  id="message"
+                  name="message"
+                  value={description}
+                  onChange={(e) => setDescription(e.target.value)}
                   className="h-[120px] text-[14px] w-full"
                   style={{ fontFamily: "Poppins" }}
                   placeholder="Enter Message"
@@ -123,6 +156,7 @@ const Contact: React.FC = () => {
                 <div
                   style={{ fontFamily: "Poppins" }}
                   className="bg-[#8db580] w-full max-w-[200px] hover:bg-transparent transition-all ease-in-out duration-200 border-2 border-[#8db580] text-[15px] font-[700] h-[50px] text-white hover:text-[#8db580] cursor-pointer flex gap-2 justify-center items-center rounded-4xl"
+                  onClick={handleClick}
                 >
                   Submit <SendHorizontal size={18} />
                 </div>
@@ -141,5 +175,3 @@ const Contact: React.FC = () => {
 };
 
 export default Contact;
-
-

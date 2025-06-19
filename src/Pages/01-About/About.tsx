@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import about from "../../assets/Images/about.jpg";
 import { Description } from "@radix-ui/react-dialog";
+import missionimg from "../../assets/Images/mission.jpg";
+import journeyimg from "../../assets/Images/journyimg.jpg";
 
 const About: React.FC = () => {
   const journeyData = {
@@ -34,6 +36,22 @@ const About: React.FC = () => {
     ],
   };
 
+  const mission = {
+    sectionTitle: "Guiding Principles ",
+    milestones: [
+      {
+        year: "Our Vision",
+        description:
+          "To be a global textile leader by innovating through tradition and empowering fashion through quality. ",
+      },
+      {
+        year: "Our Mission",
+        description:
+          "To serve brands, retailers, and communities with premium textiles and retail opportunities that inspire confidence and creativity. ",
+      },
+    ],
+  };
+
   const [showAll, setShowAll] = useState(false);
 
   const visibleMilestones = showAll
@@ -61,29 +79,20 @@ const About: React.FC = () => {
           {/* Left Column */}
           <div className="lg:w-1/2 w-full z-10">
             <h5 className="text-sm font-semibold text-gray-500 tracking-wider mb-2 uppercase">
-              {journeyData.sectionTitle}
+              {mission.sectionTitle}
             </h5>
             <div className="w-10 h-[2px] bg-[#8db580] mb-4"></div>
 
-            {visibleMilestones.map((item, index) => (
+            {mission.milestones.map((item, index) => (
               <div key={index}>
-                <h2 className="text-3xl lg:text-5xl font-serif text-gray-800 leading-tight mb-6">
+                <h2 className="text-2xl lg:text-4xl font-serif text-gray-800 leading-tight mb-4">
                   {item.year}
                 </h2>
-                <p className="text-gray-600 text-base leading-relaxed mb-8 max-w-[500px]">
+                <p className="text-gray-600 text-base leading-relaxed mb-6 max-w-[500px]">
                   {item.description}
                 </p>
               </div>
             ))}
-
-            {journeyData.milestones.length > 2 && !showAll && (
-              <button
-                className="bg-[#8db580] hover:bg-transparent hover:text-[#8db580] text-white font-bold py-3 px-6 rounded-full shadow-lg transition border border-[#8db580]"
-                onClick={() => setShowAll(true)}
-              >
-                Learn More
-              </button>
-            )}
           </div>
 
           {/* Right Column */}
@@ -94,7 +103,7 @@ const About: React.FC = () => {
             {/* Image */}
             <div className="relative z-10 shadow-xl rounded-md overflow-hidden w-full max-w-[500px]">
               <img
-                src={about}
+                src={missionimg}
                 alt="About us"
                 className="w-full h-auto object-cover"
               />
@@ -117,7 +126,7 @@ const About: React.FC = () => {
             {/* Image */}
             <div className="relative z-10 shadow-xl rounded-md overflow-hidden w-full max-w-[500px]">
               <img
-                src={about}
+                src={journeyimg}
                 alt="About us"
                 className="w-full h-auto object-cover"
               />
@@ -161,41 +170,3 @@ const About: React.FC = () => {
 };
 
 export default About;
-
-////////////////////////////////////////////
-
-{
-  /* <div className="lg:w-1/2 w-full z-10">
-            <h5 className="text-sm font-semibold text-gray-500 tracking-wider mb-2 uppercase">
-              Our Journey
-            </h5>
-            <div className="w-10 h-[2px] bg-[#8db580] mb-4"></div>
-            <h2 className="text-3xl lg:text-5xl font-serif text-gray-800 leading-tight mb-6">
-              
-              1945 – Foundation:
-            </h2>
-            <p className="text-gray-600 text-base leading-relaxed mb-8 max-w-[500px]">
-              Kandaswarna was founded by (late) Mr. Kandasamy as a small trading
-              company focused on local handloom sarees and dhotis in Salem.
-            </p>
-            <h2 className="text-3xl lg:text-5xl font-serif text-gray-800 leading-tight mb-6">
-              About SIP Calling <br className="hidden lg:block" /> in Our Voip
-              1970s–90s – Domestic Growth:
-            </h2>
-            <p className="text-gray-600 text-base leading-relaxed mb-8 max-w-[500px]">
-              Expanded across Tamil Nadu, diversifying into a wide range of
-              traditional textiles and building strong retailer partnerships.{" "}
-            </p>{" "}
-            <h2 className="text-3xl lg:text-5xl font-serif text-gray-800 leading-tight mb-6">
-              About SIP Calling <br className="hidden lg:block" /> in Our Voip
-              2000 – Global Expansion:
-            </h2>
-            <p className="text-gray-600 text-base leading-relaxed mb-8 max-w-[500px]">
-              Entered international markets by exporting party wear, sarees,
-              men’s and kids’ fashion, establishing a global presence.{" "}
-            </p>
-            <button className="bg-[#8db580] hover:bg-[#8db580] text-white font-bold py-3 px-6 rounded-full shadow-lg transition"> 
-              Learn More
-            </button> 
-          </div> */
-}

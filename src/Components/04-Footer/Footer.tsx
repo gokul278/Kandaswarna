@@ -21,18 +21,42 @@ const Footer: React.FC<FooterProps> = () => {
       <div className="w-[100%] relative bg-[#123f49] backdrop-blur-sm flex justify-center items-center border-b-1 border-[#fff] z-0">
         <div className="w-[90%] lg:w-[80%] flex flex-col lg:flex-row justify-center items-center py-10 lg:py-5">
           <div className="w-[100%] lg:w-[45%] flex gap-3 justify-start">
-            <div className="w-[40px] group h-[40px] flex justify-around items-center border-2 rounded-4xl hover:border-[#777] transition-all duration-300 cursor-pointer">
-              <Facebook className="w-[20px] h-[20px] mr-[1px] text-[#fff] group-hover:text-[#777] transition-all duration-300" />
-            </div>
-            <div className="w-[40px] group h-[40px] flex justify-around items-center border-2 rounded-4xl hover:border-[#777] transition-all duration-300 cursor-pointer">
-              <Twitter className="w-[20px] h-[20px] text-[#fff]  group-hover:text-[#777] transition-all duration-300 " />
-            </div>
-            <div className="w-[40px] group h-[40px] flex justify-around items-center border-2 rounded-4xl hover:border-[#777] transition-all duration-300 cursor-pointer">
-              <Youtube className="w-[20px] h-[20px] text-[#fff] group-hover:text-[#777] transition-all duration-300" />
-            </div>
-            <div className="w-[40px] group h-[40px] flex justify-around items-center border-2 rounded-4xl hover:border-[#777] transition-all duration-300 cursor-pointer">
-              <Linkedin className="w-[20px] h-[20px] text-[#fff] group-hover:text-[#777] transition-all duration-300" />
-            </div>
+            <a
+              href="https://www.facebook.com/your-page"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <div className="w-[40px] group h-[40px] flex justify-around items-center border-2 rounded-4xl hover:border-[#777] transition-all duration-300 cursor-pointer">
+                <Facebook className="w-[20px] h-[20px] mr-[1px] text-[#fff] group-hover:text-[#777] transition-all duration-300" />
+              </div>
+            </a>
+            <a
+              href="https://www.facebook.com/your-page"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <div className="w-[40px] group h-[40px] flex justify-around items-center border-2 rounded-4xl hover:border-[#777] transition-all duration-300 cursor-pointer">
+                <Twitter className="w-[20px] h-[20px] text-[#fff]  group-hover:text-[#777] transition-all duration-300 " />
+              </div>
+            </a>
+            <a
+              href="https://www.facebook.com/your-page"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <div className="w-[40px] group h-[40px] flex justify-around items-center border-2 rounded-4xl hover:border-[#777] transition-all duration-300 cursor-pointer">
+                <Youtube className="w-[20px] h-[20px] text-[#fff] group-hover:text-[#777] transition-all duration-300" />
+              </div>
+            </a>
+            <a
+              href="https://www.facebook.com/your-page"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <div className="w-[40px] group h-[40px] flex justify-around items-center border-2 rounded-4xl hover:border-[#777] transition-all duration-300 cursor-pointer">
+                <Linkedin className="w-[20px] h-[20px] text-[#fff] group-hover:text-[#777] transition-all duration-300" />
+              </div>
+            </a>
           </div>
           <div className="w-[100%] lg:w-[55%]  flex flex-col lg:flex-row justify-center items-center">
             <div className="w-[100%] lg:w-[50%] flex gap-4 mt-8 lg:mt-0 justify-start lg:justify-end">
@@ -44,7 +68,7 @@ const Footer: React.FC<FooterProps> = () => {
                   style={{ fontFamily: "Poppins" }}
                   className="h-[20px] text-[#fff] font-[Poppins] font-[700] text-[15px]"
                 >
-                  +91 9842653413
+                  +91 9843649195
                 </div>
                 <div
                   style={{ fontFamily: "Poppins" }}
@@ -54,24 +78,29 @@ const Footer: React.FC<FooterProps> = () => {
                 </div>
               </div>
             </div>
-            <div className="w-[100%] lg:w-[50%] flex justify-start lg:justify-end gap-4 mt-8 lg:mt-0">
-              <div className="h-[40px] flex justify-center items-center">
-                <MapPin className="w-[35px] h-[35px] mt-[5px] text-[#fff]" />
+            <div className="w-full lg:w-1/2 flex flex-col lg:flex-row justify-start lg:justify-end items-start lg:items-center gap-4 mt-8 lg:mt-0 px-4">
+              <div className="flex-shrink-0 h-[40px] flex justify-center items-center">
+                <MapPin className="w-[30px] h-[30px] text-white" />
               </div>
-              <div className="h-[40px] flex flex-col justify-center ">
+              <a
+                href="https://www.google.com/maps/place/Kandaswarna+fabrics/@11.6724637,78.1513611,17z/data=!3m1!4b1!4m6!3m5!1s0x3babf04c23afafbd:0x86851f2094562589!8m2!3d11.6724637!4d78.1513611!16s%2Fg%2F1hm3bjkw1?entry=ttu&g_ep=EgoyMDI1MDYxMS4wIKXMDSoASAFQAw%3D%3D"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex flex-col justify-center max-w-[300px] no-underline"
+              >
                 <div
                   style={{ fontFamily: "Poppins" }}
-                  className="h-[20px] text-[#fff] font-[Poppins] font-[700] text-[15px]"
+                  className="text-white font-semibold text-sm leading-snug"
                 >
-                  19th West Street, Apt 84
+                  No. 19-B, Kandaswarna Corporate House,
                 </div>
                 <div
                   style={{ fontFamily: "Poppins" }}
-                  className="h-[20px] text-[#fff] font-[Poppins] font-[400] text-[15px]"
+                  className="text-white font-normal text-sm leading-snug"
                 >
-                  San Francisco, CA 94103
+                  Ramakrishna Road, Salem, Tamil Nadu 636007
                 </div>
-              </div>
+              </a>
             </div>
           </div>
         </div>
@@ -81,7 +110,7 @@ const Footer: React.FC<FooterProps> = () => {
           <div className="w-[100%] lg:w-[30%]">
             <div
               style={{ fontFamily: "'Playfair Display', serif" }}
-              className="text-[#fff] flex flex-row  text-[18px] font-[Poppins] font-[700]"
+              className="text-[#fff] flex flex-row  text-[18px] font-[Poppins] font-[700] gap-3"
             >
               <span>
                 <img src={logo} className=" h-[40px] w-[40px]" alt="" />{" "}
@@ -97,10 +126,7 @@ const Footer: React.FC<FooterProps> = () => {
               style={{ fontFamily: "Poppins" }}
               className="mt-5 text-[#fff] text-[15px] font-[Poppins] font-[500] text-justify"
             >
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente
-              rem earum minima voluptatibus odit cumque exercitationem placeat
-              deserunt corporis quos! Odio iure molestias eum deserunt dolor.
-              Magni perspiciatis reprehenderit eos.
+              Legacy in Every Thread, Innovation in Every Step
             </div>
           </div>
           <div className="w-[30%] flex flex-col mt-10 lg:mt-0">
@@ -118,7 +144,7 @@ const Footer: React.FC<FooterProps> = () => {
               <div
                 style={{ fontFamily: "Poppins" }}
                 onClick={() => {
-                  navigate("/home");
+                  navigate("/");
                   window.scrollTo({ top: 0, behavior: "smooth" });
                 }}
                 className="relative group mt-7 inline-block text-[#fff] text-[15px] font-[Poppins] font-[500] text-justify cursor-pointer"
@@ -143,20 +169,24 @@ const Footer: React.FC<FooterProps> = () => {
             <div>
               <div
                 style={{ fontFamily: "Poppins" }}
+                onClick={() => {
+                  navigate("/fabrics");
+                  window.scrollTo({ top: 0, behavior: "smooth" });
+                }}
                 className="relative group mt-2 inline-block text-[#fff] text-[15px] font-[Poppins] font-[500] text-justify cursor-pointer"
               >
-                SERVICES
+                OUR BRANDS
                 <span className="absolute bottom-0 left-0 block h-[2px] w-0 bg-[#fff] transition-all duration-400 group-hover:w-full"></span>
               </div>
             </div>
             <div>
-              <div
+              {/* <div
                 style={{ fontFamily: "Poppins" }}
                 className="relative group mt-2 inline-block text-[#fff] text-[15px] font-[Poppins] font-[500] text-justify cursor-pointer"
               >
                 PRODUCTS
                 <span className="absolute bottom-0 left-0 block h-[2px] w-0 bg-[#fff] transition-all duration-400 group-hover:w-full"></span>
-              </div>
+              </div> */}
             </div>
             <div>
               <div
@@ -206,7 +236,7 @@ const Footer: React.FC<FooterProps> = () => {
                 style={{ fontFamily: "Poppins" }}
                 className="relative group mt-2 inline-block text-[#fff] text-[15px] font-[Poppins] font-[500] text-justify cursor-pointer"
               >
-                Construction
+                Spaces For Rent
                 <span className="absolute bottom-0 left-0 block h-[2px] w-0 bg-[#fff] transition-all duration-400 group-hover:w-full"></span>
               </div>
             </div>

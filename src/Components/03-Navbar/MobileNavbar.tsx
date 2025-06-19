@@ -1,9 +1,12 @@
 import { ChevronDown, MoveRight, Phone } from "lucide-react";
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
-interface NavbarProps {}
+interface NavbarProps {
+  closeMenu: () => void;
+}
 
-const MobileNavbar: React.FC<NavbarProps> = () => {
+const MobileNavbar: React.FC<NavbarProps> = ({ closeMenu }) => {
   const [openIndex, setOpenIndex] = React.useState<number | null>(null);
   const navVal = [
     {
@@ -15,114 +18,121 @@ const MobileNavbar: React.FC<NavbarProps> = () => {
     },
     {
       name: "ABOUT",
-      link: "/",
+      link: "/about",
       type: "link",
       isMultiple: false,
       MultipleVal: [],
     },
     {
       name: "OUR BRANDS",
-      link: "/about",
+      link: "/brands",
       type: "link",
       isMultiple: true,
       direction: "vertical",
       MultipleVal: [
         {
-          heading: "Textiles",
-          link: "/service",
+          heading: "Kandaswarna Fabrics",
+          link: "/fabrics",
           subNav: [],
         },
         {
-          heading: "Retail Mall",
-          link: "/service",
+          heading: "Kandaswarna Shopping Mall",
+          link: "/mall",
           subNav: [],
         },
         {
-          heading: "Construction",
-          link: "/service",
+          heading: "Kandaswarnaa Hi Tech City",
+          link: "/hitechcity",
           subNav: [],
         },
       ],
     },
+    // {
+    //   name: "PRODUCTS",
+    //   link: "/about",
+    //   type: "link",
+    //   isMultiple: true,
+    //   direction: "vertical",
+    //   MultipleVal: [
+    //     {
+    //       heading: "Fabric",
+    //       link: "/service",
+    //       subNav: [
+    //         {
+    //           heading: "Premium Cotton",
+    //           link: "/new1",
+    //         },
+    //         {
+    //           heading: "Silk Blend",
+    //           link: "/new2",
+    //         },
+    //         {
+    //           heading: "Traditional Weaves",
+    //           link: "/new2",
+    //         },
+    //         {
+    //           heading: "View All",
+    //           link: "/new2",
+    //         },
+    //       ],
+    //     },
+    //     {
+    //       heading: "Sarees",
+    //       link: "/service",
+    //       isSubnav: true,
+    //       subNav: [
+    //         {
+    //           heading: "Wedding Collection",
+    //           link: "/new1",
+    //         },
+    //         {
+    //           heading: "Everyday Elegance",
+    //           link: "/new2",
+    //         },
+    //         {
+    //           heading: "Heritage Series",
+    //           link: "/new2",
+    //         },
+    //         {
+    //           heading: "View All",
+    //           link: "/new2",
+    //         },
+    //       ],
+    //     },
+    //     {
+    //       heading: "Kids Wear",
+    //       link: "/service",
+    //       isSubnav: true,
+    //       subNav: [
+    //         {
+    //           heading: "Pattupavadai Collection",
+    //           link: "/new1",
+    //         },
+    //         {
+    //           heading: "Celebration Wear",
+    //           link: "/new2",
+    //         },
+    //         {
+    //           heading: "Everyday Comfort",
+    //           link: "/new2",
+    //         },
+    //         {
+    //           heading: "View All",
+    //           link: "/new2",
+    //         },
+    //       ],
+    //     },
+    //   ],
+    // },
+    // {
+    //   name: "OUR BLOG",
+    //   link: "/about",
+    //   type: "link",
+    //   isMultiple: false,
+    //   MultipleVal: [],
+    // },
     {
-      name: "PRODUCTS",
-      link: "/about",
-      type: "link",
-      isMultiple: true,
-      direction: "vertical",
-      MultipleVal: [
-        {
-          heading: "Fabric",
-          link: "/service",
-          subNav: [
-            {
-              heading: "Premium Cotton",
-              link: "/new1",
-            },
-            {
-              heading: "Silk Blend",
-              link: "/new2",
-            },
-            {
-              heading: "Traditional Weaves",
-              link: "/new2",
-            },
-            {
-              heading: "View All",
-              link: "/new2",
-            },
-          ],
-        },
-        {
-          heading: "Sarees",
-          link: "/service",
-          isSubnav: true,
-          subNav: [
-            {
-              heading: "Wedding Collection",
-              link: "/new1",
-            },
-            {
-              heading: "Everyday Elegance",
-              link: "/new2",
-            },
-            {
-              heading: "Heritage Series",
-              link: "/new2",
-            },
-            {
-              heading: "View All",
-              link: "/new2",
-            },
-          ],
-        },
-        {
-          heading: "Kids Wear",
-          link: "/service",
-          isSubnav: true,
-          subNav: [
-            {
-              heading: "Pattupavadai Collection",
-              link: "/new1",
-            },
-            {
-              heading: "Celebration Wear",
-              link: "/new2",
-            },
-            {
-              heading: "Everyday Comfort",
-              link: "/new2",
-            },
-            {
-              heading: "View All",
-              link: "/new2",
-            },
-          ],
-        },
-      ],
-    },
-    {
-      name: "+91 9842653413",
+      name: "+91 9843649195",
       link: "/",
       type: "content",
       icon: <Phone className="w-[13px] h-[13px]" />,
@@ -138,6 +148,8 @@ const MobileNavbar: React.FC<NavbarProps> = () => {
     },
   ];
 
+  const navigate = useNavigate();
+
   return (
     <div className="flex flex-col w-[100%] h-[100%] gap-[20px] text-[13px] mt-10 px-8 overflow-auto pb-8">
       {navVal.map((item, index) => (
@@ -147,7 +159,7 @@ const MobileNavbar: React.FC<NavbarProps> = () => {
               {item.isMultiple ? (
                 <div className="relative">
                   <div
-                  style={{ fontFamily: "Poppins" }}
+                    style={{ fontFamily: "Poppins" }}
                     className="flex font-[Poppins] font-[700] text-[#404040] cursor-pointer items-center gap-[4px]"
                     onClick={() =>
                       setOpenIndex(openIndex === index ? null : index)
@@ -162,7 +174,7 @@ const MobileNavbar: React.FC<NavbarProps> = () => {
                   </div>
                   {openIndex === index && (
                     <div className="pt-2 flex-col">
-                      <div className="hover:rounded-md rounded-md shadow-lg bg-white pl-5 pr-10 pt-2 pb-3">
+                      <div className="hover:rounded-md rounded-md shadow-lg bg-white pl-1 pr-10 pt-2 pb-3">
                         <div
                           className="block mt-[5px]"
                           role="menu"
@@ -171,16 +183,23 @@ const MobileNavbar: React.FC<NavbarProps> = () => {
                         >
                           {item.MultipleVal.map((subItem, subIndex) => (
                             <div key={subIndex}>
-                              <a
-                                href={subItem.link}
+                              <div
+                                onClick={() => {
+                                  navigate(subItem.link);
+                                  window.scrollTo({
+                                    top: 0,
+                                    behavior: "smooth",
+                                  });
+                                  closeMenu();
+                                }}
                                 style={{ fontFamily: "Poppins" }}
                                 className="block w-[180px] px-4 py-[5px] text-[12px] font-[Poppins] font-[700] text-gray-700 hover:text-gray-900"
                                 role="menuitem"
                               >
                                 {subItem.heading}
-                              </a>
+                              </div>
                               {subItem.subNav &&
-                                subItem.subNav.map((item, i) => (
+                                subItem.subNav.map((item: any, i) => (
                                   <div
                                     key={i}
                                     style={{ fontFamily: "Poppins" }}
@@ -200,19 +219,44 @@ const MobileNavbar: React.FC<NavbarProps> = () => {
                   )}
                 </div>
               ) : (
-                <div style={{ fontFamily: "Poppins" }} className="relative group font-[Poppins] font-[700] text-[#404040] cursor-pointer">
+                <div
+                  style={{ fontFamily: "Poppins" }}
+                  className="relative group font-[Poppins] font-[700] text-[#404040] cursor-pointer"
+                  onClick={() => {
+                    navigate(item.link);
+                    window.scrollTo({
+                      top: 0,
+                      behavior: "smooth",
+                    });
+                    closeMenu();
+                  }}
+                >
                   {item.name}
                   <span className="absolute bottom-0 left-0 block h-[2px] w-0 bg-[#1dcd9f] transition-all duration-400 group-hover:w-full"></span>
                 </div>
               )}
             </>
           ) : item.type === "content" ? (
-            <div style={{ fontFamily: "Poppins" }} className="relative group font-[Poppins] font-[700]  text-[#777] cursor-pointer flex gap-1 items-center">
+            <div
+              style={{ fontFamily: "Poppins" }}
+              className="relative group font-[Poppins] font-[700]  text-[#777] cursor-pointer flex gap-1 items-center"
+            >
               {item.icon}
               {item.name}
             </div>
           ) : item.type === "button" ? (
-            <div style={{ fontFamily: "Poppins" }} className="bg-[#8db580] hover:bg-transparent transition-all ease-in-out duration-200 border-2 border-[#8db580] relative text-[15px] group font-[Poppins] py-[15px] px-[20px] font-[700] h-[50px] text-[#fff] cursor-pointer flex gap-1 justify-center items-center rounded-4xl">
+            <div
+              style={{ fontFamily: "Poppins" }}
+              onClick={() => {
+                navigate(item.link);
+                window.scrollTo({
+                  top: 0,
+                  behavior: "smooth",
+                });
+                closeMenu();
+              }}
+              className="bg-[#8db580] hover:bg-transparent transition-all ease-in-out duration-200 border-2 border-[#8db580] relative text-[15px] group font-[Poppins] py-[15px] px-[20px] font-[700] h-[50px] text-[#fff] cursor-pointer flex gap-1 justify-center items-center rounded-4xl"
+            >
               {item.name}
             </div>
           ) : null}
