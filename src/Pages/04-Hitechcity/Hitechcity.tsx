@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import City from "../../assets/Images/City1.jpg";
 import Mall3 from "../../assets/Images/Mall3.jpg";
 import Land1 from "../../assets/Images/Land1.jpg";
-import Techpark1 from "../../assets/Images/Techpark1.jpg";
+import Techpark1 from "../../assets/Images/TechPark1.jpg";
 import HighWay1 from "../../assets/Images/HighWay1.jpg";
 import Hotel1 from "../../assets/Images/Hotel1.jpg";
 import Hospital1 from "../../assets/Images/Hospital1.jpg";
