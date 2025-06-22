@@ -7,7 +7,7 @@ import { useNavigate } from "react-router-dom";
 import KerealaSaree from "../../assets/Images/KerealaSaree1.jpg";
 import Chudithars from "../../assets/Fabrics/chudi.png";
 import UniformSaree from "../../assets/Images/Uniform Saree1.jpg";
-import PattuPaavadai from "../../assets/Images/PattuPaavadai1.jpg";
+import PattuPaavadai from "../../assets/Fabrics/pattu.jpg";
 import Lehengas from "../../assets/Fabrics/lehenga.png";
 import Shirts from "../../assets/Images/Shirts1.jpg";
 import BoysDress from "../../assets/Images/Boys1.jpg";
@@ -15,10 +15,9 @@ import GirlsDress from "../../assets/Images/Girls1.jpg";
 import PartyDress from "../../assets/Images/KidsPartyWear1.jpg";
 import Vesti from "../../assets/Images/Vesti1.png";
 import pinksilk from "../../assets/Fabrics/pinksilk.png";
-import redsaree from "../../assets//Fabrics/redsaree.png";
+import redsaree from "../../assets//Fabrics/redsaree1.jpg";
 import designer from "../../assets/Fabrics/design.png";
-
-
+import redblue from "../../assets/Fabrics/redblue.jpg";
 
 const Fabrics: React.FC = () => {
   const navigate = useNavigate();
@@ -89,118 +88,57 @@ const Fabrics: React.FC = () => {
           We import and export a wide range of men’s, women’s, and kids’
           fashion, blending heritage with modern flair.
         </div>
+
         <div
-          className="text-[#3d404e] text-[44px]"
+          className="text-[#3d404e] text-[44px] mt-[50px]"
           style={{ fontFamily: "'Playfair Display', serif" }}
         >
           Women’s Wear
         </div>
-        <div className=" w-[80%] mt-[50px] flex flex-col lg:flex-row justify-between">
-          <div
-            className="w-[100%] lg:w-[49%] h-[500px] bg-cover bg-center relative flex justify-center items-center"
-            style={{ backgroundImage: `url(${redsaree})` }}
-          >
-            <div className="absolute inset-0 bg-[#00000027]"></div>
-            <div
-              style={{ fontFamily: "Poppins" }}
-              className="relative w-[90%] flex flex-col justify-center items-center text-center text-4xl px-4 text-[#fff]"
-            >
-              Sarees
-            </div>
-          </div>
-          <div className="w-[100%] flex flex-col mt-[20px] lg:mt-[0px] lg:flex-col justify-between lg:w-[49%] h-[500px]">
-            <div className="w-[100%] flex justify-between h-[240px]">
-              <div
-                className="w-[48%] h-[240px] bg-cover bg-center relative flex justify-center items-center"
-                style={{ backgroundImage: `url(${pinksilk})` }}
-              >
-                <div className="absolute inset-0 bg-[#0000003f]"></div>
-                <div
-                  style={{ fontFamily: "Poppins" }}
-                  className="relative w-[90%] flex flex-col justify-center items-center text-center text-4xl px-4 text-[#fff]"
-                >
-                  Silk Sarees
-                </div>
-              </div>
-              <div
-                className="w-[48%] h-[240px] bg-cover bg-center relative flex justify-center items-center"
-                style={{ backgroundImage: `url(${KerealaSaree})` }}
-              >
-                <div className="absolute inset-0 bg-[#00000054]"></div>
-                <div
-                  style={{ fontFamily: "Poppins" }}
-                  className="relative w-[90%] flex flex-col justify-center items-center text-center text-4xl px-4 text-[#fff]"
-                >
-                  Kerala Sarees
-                </div>
-              </div>
-            </div>
-            <div
-              className="w-[100%] h-[240px] bg-cover bg-center relative flex justify-center items-center"
-              style={{ backgroundImage: `url(${designer})` }}
-            >
-              <div className="absolute inset-0 bg-[#00000037]"></div>
-              <div
-                style={{ fontFamily: "Poppins" }}
-                className="relative w-[90%] flex flex-col justify-center items-center text-center text-4xl px-4 text-[#fff]"
-              >
-                Designer Sarees
-              </div>
-            </div>
-          </div>
-        </div>
 
-        <div className=" w-[80%] flex-col lg:flex-row mt-[20px] flex justify-between">
-          <div className="w-[100%] flex flex-col justify-between lg:w-[49%] h-[500px]">
+        <div className="w-[80%] mt-[50px] grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {[
+            { label: "Sarees", image: redsaree },
+            { label: "Silk Sarees", image: pinksilk },
+            { label: "Designer Sarees", image: designer },
+            { label: "Chudithars", image: Chudithars },
+            { label: "Pattu Paavadai", image: PattuPaavadai },
+            { label: "Lehengas", image: Lehengas },
+            { label: "Kerala Sarees", image: KerealaSaree },
+            { label: "Uniform Sarees", image: UniformSaree },
+          ].map((item, index) => (
             <div
-              className="w-[100%] h-[240px] bg-cover bg-center relative flex justify-center items-center"
-              style={{ backgroundImage: `url(${Chudithars})` }}
+              key={index}
+              className="w-full h-[500px] bg-cover bg-center relative flex justify-center items-center"
+              style={{ backgroundImage: `url(${item.image})` }}
             >
-              <div className="absolute inset-0 bg-[#0000005d]"></div>
+              <div className="absolute inset-0 bg-[#0000004e]"></div>
               <div
                 style={{ fontFamily: "Poppins" }}
                 className="relative w-[90%] flex flex-col justify-center items-center text-center text-4xl px-4 text-[#fff]"
               >
-                Chudithars
+                {item.label}
               </div>
             </div>
-            <div className="w-[100%] flex justify-between h-[240px]">
-              <div
-                className="w-[48%] h-[240px] bg-cover bg-center relative flex justify-center items-center"
-                style={{ backgroundImage: `url(${UniformSaree})` }}
-              >
-                <div className="absolute inset-0 bg-[#00000027]"></div>
-                <div
-                  style={{ fontFamily: "Poppins" }}
-                  className="relative w-[90%] flex flex-col justify-center items-center text-center text-4xl px-4 text-[#fff]"
-                >
-                  Uniform Sarees
-                </div>
-              </div>
-              <div
-                className="w-[48%] h-[240px] bg-cover bg-center relative flex justify-center items-center"
-                style={{ backgroundImage: `url(${PattuPaavadai})` }}
-              >
-                <div className="absolute inset-0 bg-[#00000094]"></div>
-                <div
-                  style={{ fontFamily: "Poppins" }}
-                  className="relative w-[90%] flex flex-col justify-center items-center text-center text-4xl px-4 text-[#fff]"
-                >
-                  Pattu Paavadai
-                </div>
-              </div>
-            </div>
-          </div>
+          ))}
           <div
-            className="w-[100%] lg:w-[49%] mt-[20px] lg:mt-[0px] h-[500px] bg-cover bg-center relative flex justify-center items-center"
-            style={{ backgroundImage: `url(${Lehengas})` }}
+            className="w-full h-[500px] bg-cover bg-center relative flex justify-center items-center"
+            style={{ backgroundImage: `url(${redblue})` }}
+            onClick={() => {
+              navigate("/collections");
+              window.scrollTo({
+                top: 0,
+                behavior: "smooth",
+              });
+            }}
           >
             <div className="absolute inset-0 bg-[#0000004e]"></div>
             <div
               style={{ fontFamily: "Poppins" }}
-              className="relative w-[90%] flex flex-col justify-center items-center text-center text-4xl px-4 text-[#fff]"
+              className="relative w-[90%] flex flex-row justify-center items-center text-center text-2xl px-4 text-[#fff] cursor-pointer group"
             >
-              Lehengas
+              View More Collections
+              <span className="absolute bottom-0 left-1/2 w-0 h-[2px] bg-white transition-all duration-500 group-hover:w-full group-hover:left-0"></span>
             </div>
           </div>
         </div>
