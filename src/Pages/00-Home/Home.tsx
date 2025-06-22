@@ -79,67 +79,6 @@ const Home: React.FC<HomeProps> = () => {
       {/* Top session */}
 
       <div className="w-full h-auto lg:h-[100vh] flex flex-col lg:flex-row">
-        {/* Section 1 - Fabric */}
-        <div
-          className={`w-full lg:w-1/3 h-[100vh] bg-cover bg-center relative flex justify-center items-center transform transition-all duration-1000 ease-out ${
-            isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
-          }`}
-          style={{
-            backgroundImage: `url(${fabric})`,
-            transitionDelay: "0ms",
-          }}
-        >
-          <div className="absolute inset-0 bg-[#00000094] transition-opacity duration-700"></div>
-          <div
-            className={`relative w-[90%] flex flex-col justify-center items-center text-center px-4 transform transition-all duration-800 ease-out ${
-              isVisible
-                ? "opacity-100 translate-y-0 scale-100"
-                : "opacity-0 translate-y-12 scale-95"
-            }`}
-            style={{ transitionDelay: "200ms" }}
-          >
-            <div
-              style={{
-                fontFamily: "'Playfair Display', serif",
-                transitionDelay: "400ms",
-              }}
-              className={`text-white text-[28px] md:text-[32px] lg:text-[36px] font-bold transform transition-all duration-700 ease-out ${
-                isVisible
-                  ? "opacity-100 translate-y-0"
-                  : "opacity-0 translate-y-6"
-              }`}
-            >
-              Kandaswarna Fabrics
-            </div>
-            <div
-              style={{ fontFamily: "Poppins", transitionDelay: "600ms" }}
-              className={`text-white text-[14px] md:text-[16px] font-semibold mt-4 transform transition-all duration-700 ease-out ${
-                isVisible
-                  ? "opacity-100 translate-y-0"
-                  : "opacity-0 translate-y-6"
-              }`}
-            >
-              Export & Import of premium fabrics like Sampin, Sarees, Kurtis,
-              and Party Wear.
-            </div>
-            <div
-              className={`bg-[#8db580] w-[160px] md:w-[180px] mt-8 hover:bg-transparent hover:scale-105 transition-all ease-in-out duration-200 border-2 border-[#8db580] text-[14px] font-[700] h-[45px] text-white cursor-pointer flex justify-center items-center rounded-3xl transform ${
-                isVisible
-                  ? "opacity-100 translate-y-0 scale-100"
-                  : "opacity-0 translate-y-6 scale-95"
-              }`}
-              onClick={() => {
-                console.log("clicked");
-                navigate("/fabrics");
-                window.scrollTo({ top: 0, behavior: "smooth" });
-              }}
-              style={{ transitionDelay: "800ms" }}
-            >
-              Explore More
-            </div>
-          </div>
-        </div>
-
         {/* Section 2 - Mall */}
         <div
           className={`w-full lg:w-1/3 h-[100vh] bg-cover bg-center relative flex justify-center items-center transform transition-all duration-1000 ease-out ${
@@ -189,10 +128,70 @@ const Home: React.FC<HomeProps> = () => {
                   : "opacity-0 translate-y-6 scale-95"
               }`}
               style={{ transitionDelay: "1100ms" }}
-                onClick={() => {
-                  navigate("/mall");
-                  window.scrollTo({ top: 0, behavior: "smooth" });
-                }}
+              onClick={() => {
+                navigate("/mall");
+                window.scrollTo({ top: 0, behavior: "smooth" });
+              }}
+            >
+              Explore More
+            </div>
+          </div>
+        </div>
+        {/* Section 1 - Fabric */}
+        <div
+          className={`w-full lg:w-1/3 h-[100vh] bg-cover bg-center relative flex justify-center items-center transform transition-all duration-1000 ease-out ${
+            isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+          }`}
+          style={{
+            backgroundImage: `url(${fabric})`,
+            transitionDelay: "0ms",
+          }}
+        >
+          <div className="absolute inset-0 bg-[#00000094] transition-opacity duration-700"></div>
+          <div
+            className={`relative w-[90%] flex flex-col justify-center items-center text-center px-4 transform transition-all duration-800 ease-out ${
+              isVisible
+                ? "opacity-100 translate-y-0 scale-100"
+                : "opacity-0 translate-y-12 scale-95"
+            }`}
+            style={{ transitionDelay: "200ms" }}
+          >
+            <div
+              style={{
+                fontFamily: "'Playfair Display', serif",
+                transitionDelay: "400ms",
+              }}
+              className={`text-white text-[28px] md:text-[32px] lg:text-[36px] font-bold transform transition-all duration-700 ease-out ${
+                isVisible
+                  ? "opacity-100 translate-y-0"
+                  : "opacity-0 translate-y-6"
+              }`}
+            >
+              Kandaswarnaa Fabrics
+            </div>
+            <div
+              style={{ fontFamily: "Poppins", transitionDelay: "600ms" }}
+              className={`text-white text-[14px] md:text-[16px] font-semibold mt-4 transform transition-all duration-700 ease-out ${
+                isVisible
+                  ? "opacity-100 translate-y-0"
+                  : "opacity-0 translate-y-6"
+              }`}
+            >
+              Export & Import of premium fabrics like Sampin, Sarees, Kurtis,
+              and Party Wear.
+            </div>
+            <div
+              className={`bg-[#8db580] w-[160px] md:w-[180px] mt-8 hover:bg-transparent hover:scale-105 transition-all ease-in-out duration-200 border-2 border-[#8db580] text-[14px] font-[700] h-[45px] text-white cursor-pointer flex justify-center items-center rounded-3xl transform ${
+                isVisible
+                  ? "opacity-100 translate-y-0 scale-100"
+                  : "opacity-0 translate-y-6 scale-95"
+              }`}
+              onClick={() => {
+                console.log("clicked");
+                navigate("/fabrics");
+                window.scrollTo({ top: 0, behavior: "smooth" });
+              }}
+              style={{ transitionDelay: "800ms" }}
             >
               Explore More
             </div>
@@ -249,10 +248,10 @@ const Home: React.FC<HomeProps> = () => {
                   : "opacity-0 translate-y-6 scale-95"
               }`}
               style={{ transitionDelay: "1400ms" }}
-                onClick={() => {
-                  navigate("/hitechcity");
-                  window.scrollTo({ top: 0, behavior: "smooth" });
-                }}
+              onClick={() => {
+                navigate("/hitechcity");
+                window.scrollTo({ top: 0, behavior: "smooth" });
+              }}
             >
               Explore More
             </div>
