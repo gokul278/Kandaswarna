@@ -14,7 +14,7 @@ const Contact: React.FC = () => {
 
   const handleClick = (e: any) => {
     e.preventDefault();
-    const to = "kandaswarnafabrics@gmail.com";
+    const to = "fabricskandaswarnaa@gmail.com";
     const subject = encodeURIComponent("Feedback");
     const body = encodeURIComponent(
       `Name: ${name}\nEmail: ${email}\nPhone: ${phone}\n\n\nMessage:\n${description}\n\nBest regards,\n${name}`
@@ -58,11 +58,11 @@ const Contact: React.FC = () => {
             </div>
             <div className="mt-5">
               <a
-                href="mailto:kandaswarnafabrics@gmail.com"
+                href="mailto:fabricskandaswarnaa@gmail.com"
                 className="text-[#3d404e] hover:text-[#8db580] underline"
                 style={{ fontFamily: "Poppins" }}
               >
-                kandaswarnafabrics@gmail.com
+                fabricskandaswarnaa@gmail.com
               </a>
             </div>
           </div>
