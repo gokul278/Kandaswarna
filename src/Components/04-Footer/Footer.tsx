@@ -1,10 +1,9 @@
 import {
   Facebook,
-  Linkedin,
+
   MapPin,
   Phone,
-  Twitter,
-  Youtube,
+
 } from "lucide-react";
 import React from "react";
 // import logoLight from "../../assets/Logo/logo-light.png";

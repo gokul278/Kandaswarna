@@ -6,7 +6,7 @@ import MobileNavbar from "../03-Navbar/MobileNavbar";
 import logo from "../../assets/Logo/Logo.png";
 import { MdFacebook } from "react-icons/md";
 import { RiInstagramFill } from "react-icons/ri";
-import { GrTwitter } from "react-icons/gr";
+
 
 interface HeaderProps {}
 
