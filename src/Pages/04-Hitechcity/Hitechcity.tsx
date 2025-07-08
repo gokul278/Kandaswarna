@@ -35,7 +35,7 @@ const Hitechcity: React.FC = () => {
                 });
               }}
             >
-              Home
+              Our Brands
             </span>{" "}
             -{" "}
             <span
@@ -46,8 +46,8 @@ const Hitechcity: React.FC = () => {
                   behavior: "smooth",
                 });
               }}
-            >
-              Our Brands
+            > Land for Sale
+             
             </span>{" "}
             -{" "}
             <span
@@ -58,8 +58,8 @@ const Hitechcity: React.FC = () => {
                   behavior: "smooth",
                 });
               }}
-            >
-              Kandaswarnaa Hi Tech City
+            >Invest in Growth
+             
             </span>
           </div>
         </div>
@@ -78,7 +78,7 @@ const Hitechcity: React.FC = () => {
           style={{ fontFamily: "Poppins" }}
           className="text-[#7d7a7a] w-[80%] text-[17px] font-[400] flex justify-center items-center text-center font-Poppins py-10"
         >
-          Welcome to Kandaswarna Hi-Tech City – a world-class, multi-use land
+          Welcome to Kandaswarnaa Hi-Tech City – a world-class, multi-use land
           development in Salem, strategically located along the Salem–Bangalore
           Highway. Designed to transform the region’s commercial, residential,
           and retail landscape, this expansive development offers premium
@@ -228,7 +228,7 @@ const Hitechcity: React.FC = () => {
           className="text-[#3d404e] w-[80%] text-[44px] mt-[50px]"
           style={{ fontFamily: "'Playfair Display', serif" }}
         >
-          Why Choose Kandaswarna Hi-Tech City?
+          Why Choose Kandaswarnaa Hi-Tech City?
         </div>
 
         <div className="w-[80%]">

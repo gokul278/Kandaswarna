@@ -11,7 +11,7 @@ const About: React.FC = () => {
       {
         year: "1945 – Foundation",
         description:
-          "Kandaswarna was founded by (late) Mr. Kandasamy as a small trading company focused on local handloom sarees and dhotis in Salem.",
+          "Kandaswarnaa was founded by (late) Mr. Kandasamy as a small trading company focused on local handloom sarees and dhotis in Salem.",
       },
       {
         year: "1970s–90s – Domestic Growth",
@@ -24,7 +24,7 @@ const About: React.FC = () => {
           "Entered international markets by exporting party wear, sarees, men’s and kids’ fashion, establishing a global presence.",
       },
       {
-        year: "2020 – Kandaswarna Mall Launch",
+        year: "2020 – Kandaswarnaa Mall Launch",
         description:
           "Opened Salem’s premium shopping mall, offering high-quality mall space for rent to retailers and brands.",
       },

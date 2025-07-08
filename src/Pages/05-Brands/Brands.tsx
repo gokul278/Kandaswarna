@@ -52,7 +52,7 @@ const Brands: React.FC = () => {
                 style={{ fontFamily: "'Playfair Display', serif" }}
                 className="text-white text-[28px] md:text-[32px] lg:text-[36px] font-bold"
               >
-                Kandaswarna Fabrics
+                Kandaswarnaa Fabrics
               </div>
               <div
                 style={{ fontFamily: "Poppins" }}
@@ -87,7 +87,7 @@ const Brands: React.FC = () => {
                 style={{ fontFamily: "'Playfair Display', serif" }}
                 className="text-white text-[28px] md:text-[32px] lg:text-[36px] font-bold"
               >
-                Kandaswarna Shopping Mall
+                Kandaswarnaa Shopping Mall
               </div>
               <div
                 style={{ fontFamily: "Poppins" }}

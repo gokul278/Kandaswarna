@@ -29,12 +29,12 @@ const Navbar: React.FC<NavbarProps> = () => {
       direction: "vertical",
       MultipleVal: [
         {
-          heading: "Kandaswarna Fabrics",
+          heading: "Kandaswarnaa Fabrics",
           link: "/fabrics",
           subNav: [],
         },
         {
-          heading: "Kandaswarna Shopping Mall",
+          heading: "Kandaswarnaa Shopping Mall",
           link: "/mall",
           subNav: [],
         },

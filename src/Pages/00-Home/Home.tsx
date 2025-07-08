@@ -45,7 +45,7 @@ const Home: React.FC<HomeProps> = () => {
 
   const handleClick = (e: any) => {
     e.preventDefault();
-    const to = " kandaswarnafabrics@gmail.com";
+    const to = "fabricskandaswarnaa@gmail.com";
     const subject = encodeURIComponent("Feedback");
     const body = encodeURIComponent(
       `Name: ${name}\nEmail: ${email}\nPhone: ${phone}\n\n\nMessage:\n${description}\n\nBest regards,\n${name}`
@@ -53,6 +53,10 @@ const Home: React.FC<HomeProps> = () => {
 
     const mailtoLink = `mailto:${to}?subject=${subject}&body=${body}`;
     window.location.href = mailtoLink;
+    setName("");
+    setEmail("");
+    setPhone("");
+    setDescription("");
   };
   const [currentSlide, setCurrentSlide] = useState(0);
   const totalSlides = 3;
@@ -109,7 +113,7 @@ const Home: React.FC<HomeProps> = () => {
                   : "opacity-0 translate-y-6"
               }`}
             >
-              Kandaswarna Shopping Mall
+              Kandaswarnaa Shopping Mall
             </div>
             <div
               style={{ fontFamily: "Poppins", transitionDelay: "900ms" }}
@@ -290,7 +294,7 @@ const Home: React.FC<HomeProps> = () => {
                     </span>{" "}
                     <span>
                       Founded in 1945 by the visionary (late) Mr. Kandasamy,
-                      Kandaswarna began as a modest textile trading company,
+                      Kandaswarnaa began as a modest textile trading company,
                       dealing with handloom sarees and dhotis crafted by local
                       artisans.
                     </span>
@@ -304,7 +308,7 @@ const Home: React.FC<HomeProps> = () => {
                     <span>
                       Over the years, the company flourished under the
                       leadership of our current chairperson, Mr.K.B.Srinivasan
-                      and Mrs.Kandaswarna who introduced value-based, niche
+                      and Mrs.Kandaswarnaa who introduced value-based, niche
                       textile products to domestic and international markets.
                     </span>
                   </div>
@@ -315,7 +319,7 @@ const Home: React.FC<HomeProps> = () => {
                       <SiSitepoint className="text-[#8db580]" />
                     </span>{" "}
                     <span>
-                      Today, Kandaswarna is a trusted B2B textile name, known
+                      Today, Kandaswarnaa is a trusted B2B textile name, known
                       for its innovative design, fabric excellence, and
                       wholesale leadership in Tamil Nadu. Based in Salem, we
                       continue to blend legacy and design to serve the future of
@@ -440,7 +444,7 @@ const Home: React.FC<HomeProps> = () => {
                     className="text-[#fff] text-[20px] lg:text-[44px] pt-5 lg:pt-10"
                     style={{ fontFamily: "'Playfair Display', serif" }}
                   >
-                    Kandaswarna Fabrics
+                    Kandaswarnaa Fabrics
                   </div>
                   <div
                     style={{ fontFamily: "Poppins" }}
@@ -481,7 +485,7 @@ const Home: React.FC<HomeProps> = () => {
                     className="text-[#fff] text-[20px] lg:text-[44px] pt-5 lg:pt-10"
                     style={{ fontFamily: "'Playfair Display', serif" }}
                   >
-                    Kandaswarna Shopping Mall
+                    Kandaswarnaa Shopping Mall
                   </div>
                   <div
                     style={{ fontFamily: "Poppins" }}
@@ -799,10 +803,11 @@ const Home: React.FC<HomeProps> = () => {
                     style={{ fontFamily: "Poppins" }}
                     className="mt-5 text-[#3d404e] font-[400] text-[14px] lg:text-[16px] px-10"
                   >
-                    Neque porro quisquam est, qui dolorem ipsum quia dolor sit
-                    amet, consectetur, adipis civelit sed quia non qui dolorem
-                    ipsum quia dolor sit amet, consectetur, adipis civelit sed
-                    quia numquam eius modi. Neque porro quisquam est.
+                    Kandaswarnaa Clothing is my go-to for the latest fashion
+                    trends in Salem. Their collection is always fresh, and the
+                    quality is top-notch. I always receive compliments when I
+                    wear their outfits. Shopping here feels like shopping in a
+                    metro city, but right in Salem! - Meera S., Salem
                   </div>
                 </div>
               </div>
@@ -904,10 +909,10 @@ const Home: React.FC<HomeProps> = () => {
                     style={{ fontFamily: "Poppins" }}
                     className="mt-5 text-[#3d404e] font-[400] text-[14px] lg:text-[16px] px-10"
                   >
-                    Neque porro quisquam est, qui dolorem ipsum quia dolor sit
-                    amet, consectetur, adipis civelit sed quia non qui dolorem
-                    ipsum quia dolor sit amet, consectetur, adipis civelit sed
-                    quia numquam eius modi. Neque porro quisquam est.
+                    The location is perfect, the parking is ample, and the mall
+                    attracts the right crowd for my cafe. Thanks to Kandaswarnaa
+                    Mall, my business has grown steadily since the opening. -
+                    Vignesh K., Cafe Owner, Salem
                   </div>
                 </div>
               </div>

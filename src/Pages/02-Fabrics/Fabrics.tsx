@@ -67,7 +67,7 @@ const Fabrics: React.FC = () => {
                 });
               }}
             >
-              Kandaswarna Fabrics
+              Kandaswarnaa Fabrics
             </span>
           </div>
         </div>

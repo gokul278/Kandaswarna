@@ -8,7 +8,6 @@ import { MdFacebook } from "react-icons/md";
 import { RiInstagramFill } from "react-icons/ri";
 import { GrTwitter } from "react-icons/gr";
 
-
 interface HeaderProps {}
 
 const Header: React.FC<HeaderProps> = () => {
@@ -52,15 +51,21 @@ const Header: React.FC<HeaderProps> = () => {
           </div>
           <div className="col-span-2 items-center justify-end gap-6 md:col-span-4 lg:col-span-6">
             <div className="flex items-center justify-end gap-4">
-              <a href="https://www.facebook.com/" className="hover:text-[#8db580]">
+              <a
+                href="https://www.facebook.com/share/16sNDAZAag/"
+                className="hover:text-[#8db580]"
+              >
                 <MdFacebook />
               </a>
-              <a href="#" className="hover:text-[#8db580]">
+              <a
+                href="https://www.instagram.com/swarnasaris?igsh=MWFlMnlueWp1MTB0dw=="
+                className="hover:text-[#8db580]"
+              >
                 <RiInstagramFill />
               </a>
-              <a href="#" className="hover:text-[#8db580]">
+              {/* <a href="#" className="hover:text-[#8db580]">
                 <GrTwitter />
-              </a>
+              </a> */}
             </div>
           </div>
         </div>
@@ -79,7 +84,7 @@ const Header: React.FC<HeaderProps> = () => {
               className="text-white font-semibold"
               style={{ fontFamily: "'Playfair Display', serif" }}
             >
-              KANDASWARNA
+              KANDASWARNAA
             </span>
           </div>
 

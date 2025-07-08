@@ -19,7 +19,7 @@ const Mall: React.FC = () => {
 
   const handleClick = (e: any) => {
     e.preventDefault();
-    const to = " kandaswarnafabrics@gmail.com";
+    const to = "fabricskandaswarnaa@gmail.com";
     const subject = encodeURIComponent("Feedback");
     const body = encodeURIComponent(
       `Name: ${name}\nEmail: ${email}\nPhone: ${phone}\n\n\nMessage:\n${description}\n\nBest regards,\n${name}`
@@ -74,7 +74,7 @@ const Mall: React.FC = () => {
                 });
               }}
             >
-              Kandaswarna Shopping Mall
+              Kandaswarnaa Shopping Mall
             </span>
           </div>
         </div>

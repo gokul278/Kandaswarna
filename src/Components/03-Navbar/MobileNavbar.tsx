@@ -31,12 +31,12 @@ const MobileNavbar: React.FC<NavbarProps> = ({ closeMenu }) => {
       direction: "vertical",
       MultipleVal: [
         {
-          heading: "Kandaswarna Fabrics",
+          heading: "Kandaswarnaa Fabrics",
           link: "/fabrics",
           subNav: [],
         },
         {
-          heading: "Kandaswarna Shopping Mall",
+          heading: "Kandaswarnaa Shopping Mall",
           link: "/mall",
           subNav: [],
         },

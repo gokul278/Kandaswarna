@@ -10,6 +10,7 @@ import React from "react";
 // import logoLight from "../../assets/Logo/logo-light.png";
 import logo from "../../assets/Logo/Logo.png";
 import { useNavigate } from "react-router-dom";
+import { BsInstagram } from "react-icons/bs";
 
 interface FooterProps {}
 
@@ -22,7 +23,7 @@ const Footer: React.FC<FooterProps> = () => {
         <div className="w-[90%] lg:w-[80%] flex flex-col lg:flex-row justify-center items-center py-10 lg:py-5">
           <div className="w-[100%] lg:w-[45%] flex gap-3 justify-start">
             <a
-              href="https://www.facebook.com/your-page"
+              href="https://www.facebook.com/share/16sNDAZAag/"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -31,15 +32,15 @@ const Footer: React.FC<FooterProps> = () => {
               </div>
             </a>
             <a
-              href="https://www.facebook.com/your-page"
+              href="https://www.instagram.com/swarnasaris?igsh=MWFlMnlueWp1MTB0dw=="
               target="_blank"
               rel="noopener noreferrer"
             >
               <div className="w-[40px] group h-[40px] flex justify-around items-center border-2 rounded-4xl hover:border-[#777] transition-all duration-300 cursor-pointer">
-                <Twitter className="w-[20px] h-[20px] text-[#fff]  group-hover:text-[#777] transition-all duration-300 " />
+                <BsInstagram className="w-[20px] h-[20px] text-[#fff]  group-hover:text-[#777] transition-all duration-300 " />
               </div>
             </a>
-            <a
+            {/* <a
               href="https://www.facebook.com/your-page"
               target="_blank"
               rel="noopener noreferrer"
@@ -56,7 +57,7 @@ const Footer: React.FC<FooterProps> = () => {
               <div className="w-[40px] group h-[40px] flex justify-around items-center border-2 rounded-4xl hover:border-[#777] transition-all duration-300 cursor-pointer">
                 <Linkedin className="w-[20px] h-[20px] text-[#fff] group-hover:text-[#777] transition-all duration-300" />
               </div>
-            </a>
+            </a> */}
           </div>
           <div className="w-[100%] lg:w-[55%]  flex flex-col lg:flex-row justify-center items-center">
             <div className="w-[100%] lg:w-[50%] flex gap-4 mt-8 lg:mt-0 justify-start lg:justify-end">
@@ -115,7 +116,7 @@ const Footer: React.FC<FooterProps> = () => {
               <span>
                 <img src={logo} className=" h-[40px] w-[40px]" alt="" />{" "}
               </span>
-              <span className="mt-2">KANDASWARNA</span>
+              <span className="mt-2">KANDASWARNAA</span>
             </div>
             <div className="w-[100%] flex mt-5">
               <div className="w-[30%] bg-[#8db580] h-[3px]"></div>
@@ -216,6 +217,10 @@ const Footer: React.FC<FooterProps> = () => {
             <div>
               <div
                 style={{ fontFamily: "Poppins" }}
+                onClick={() => {
+                  navigate("/fabrics");
+                  window.scrollTo({ top: 0, behavior: "smooth" });
+                }}
                 className="relative group mt-7 inline-block text-[#fff] text-[15px] font-[Poppins] font-[500] text-justify cursor-pointer"
               >
                 Textiles
@@ -225,6 +230,10 @@ const Footer: React.FC<FooterProps> = () => {
             <div>
               <div
                 style={{ fontFamily: "Poppins" }}
+                 onClick={() => {
+                  navigate("/mall");
+                  window.scrollTo({ top: 0, behavior: "smooth" });
+                }}
                 className="relative group mt-2 inline-block text-[#fff] text-[15px] font-[Poppins] font-[500] text-justify cursor-pointer"
               >
                 Retail Mall
@@ -234,6 +243,10 @@ const Footer: React.FC<FooterProps> = () => {
             <div>
               <div
                 style={{ fontFamily: "Poppins" }}
+                 onClick={() => {
+                  navigate("/hitechcity");
+                  window.scrollTo({ top: 0, behavior: "smooth" });
+                }}
                 className="relative group mt-2 inline-block text-[#fff] text-[15px] font-[Poppins] font-[500] text-justify cursor-pointer"
               >
                 Spaces For Rent
@@ -248,7 +261,7 @@ const Footer: React.FC<FooterProps> = () => {
           style={{ fontFamily: "Poppins" }}
           className="w-[90%] lg:w-[80%] flex py-5 text-[#7d7a7a] font-[Poppins] font-[400] text-[12px]"
         >
-          Copyright © 2025, Kandaswarna Groups
+          Copyright © 2025, Kandaswarnaa Groups
         </div>
       </div>
     </>

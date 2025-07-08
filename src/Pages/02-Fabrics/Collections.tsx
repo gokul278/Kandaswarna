@@ -92,7 +92,7 @@ const Collections: React.FC = () => {
                 });
               }}
             >
-              Kandaswarna Fabrics
+              Kandaswarnaa Fabrics
             </span>
             -{" "}
             <span
